@@ -3,8 +3,12 @@ import React from 'react';
 
 function Home(){
     return(
-        <div className = "Home">
-            <h1> Track All Types of Data on Android and iPhone</h1>
+        <div className = "container">
+            <div className= "card mt-4">
+                <div className = "card-body">
+                <h1> Device Remote Monitoring System</h1>
+                </div>
+            </div>
         </div>
     )
 }
