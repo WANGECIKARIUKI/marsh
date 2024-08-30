@@ -1,84 +1,54 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
-import './Navbar.css';
-import { IoLogoBuffer } from "react-icons/io5";
-import { TbLetterX } from "react-icons/tb";
-import { GiHamburgerMenu } from "react-icons/gi";
 
-function Navbar(){
-
-    const [click, setClick] = useState(false);
-   
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
-
-
-    return (
-        <>
-
-        <nav className="navbar">
-            <div className="navbar-container">
-                <Link to="/" className="navbar-logo">
-                MARSHWARE <IoLogoBuffer className = "logo-icon"/>
-                </Link>
-                <div className = 'Menu-icon'  onClick = {handleClick}>
-                    {click ? <GiHamburgerMenu /> : <TbLetterX  />
-                    }
-                </div>
-
-                <ul className ={click ? 'nav-menu active' : 'nav-menu'}>
-                    <li className = "nav-item">
-                        <Link to = './' className = 'nav-links' onClick = {closeMobileMenu}>
-                        Home
-                        </Link>
-                    </li>
-                    <li className = "nav-item">
-                        <Link to = './dashboard' className = 'nav-links' onClick = {closeMobileMenu}>
-                        Dashboard
-                        </Link>
-                    </li>
-                    <li className = "nav-item">
-                        <Link to = '.features/' className = 'nav-links' onClick = {closeMobileMenu}>
-                        Features
-                        </Link>
-                    </li>
-                    <li className = "nav-item">
-                        <Link to = './Signup' className = 'nav-links' onClick = {closeMobileMenu}>
-                        Signup
-                        </Link>
-                    </li>
-                    <li className = "nav-item">
-                        <Link to = './Login' className = 'nav-links' onClick = {closeMobileMenu}>
-                        Login
-                        </Link>
-                    </li>
-                    <li className = "nav-item">
-                        <Link to = '.social-networks/' className = 'nav-links' onClick = {closeMobileMenu}>
-                        Social networks
-                        </Link>
-                    </li>
-                    <li className = "nav-item">
-                        <Link to = './calendar' className = 'nav-links' onClick = {closeMobileMenu}>
-                        Calendar
-                        </Link>
-                    </li>
-                    <li className = "nav-item">
-                        <Link to = './Location' className = 'nav-links' onClick = {closeMobileMenu}>
-                        Location
-                        </Link>
-                    </li>
-                </ul>
-
-
-
-
-            </div>
-        </nav>
-        
-        
-        
-        </>
-    )
-}
-
+function Navbar() {
+  return (
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <Link to = "/" class="navbar-brand">Marshware</Link>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <Link to = "./" class="nav-link active" aria-current="page">Home</Link>
+        </li>
+        <li class="nav-item">
+          <Link to = './General Features' class="nav-link">General Features</Link>
+        </li>
+        <li class="nav-item dropdown">
+          <Link to = './Social-media' class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Social Media
+          </Link>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+            <li><a class="dropdown-item" href="#">Twitter</a></li>
+            <li><a class="dropdown-item" href="#">SnapChat</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <Link to = './Dashboard' class="nav-link">Dashboard</Link>
+        </li>
+        <li class="nav-item">
+          <Link to = './Signup' class="nav-link">Signup</Link>
+        </li>
+        <li class="nav-item">
+          <Link to = './Login' class="nav-link">Login</Link>
+        </li>
+        <li class="nav-item">
+          <Link to = './Calendar' class="nav-link">Calendar</Link>
+        </li>
+        <li class="nav-item">
+          <Link to = './Contacts' class="nav-link">Contacts</Link>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+)};
 export default Navbar;
