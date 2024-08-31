@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import './Signup.css'
-import {Link} from 'react-router-dom'
-import firebase from './firebaseConfig'
+import './Signup.css';
+import {Link} from 'react-router-dom';
+import firebase from './firebaseConfig';
+
 
 
 function Signup(){
@@ -9,6 +10,7 @@ function Signup(){
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const[visible, setVisible] = useState(false)
 
 
     const handleSubmit = async(e) =>{
@@ -40,7 +42,7 @@ function Signup(){
                 <input type = "email" value= {email} placeholder = "Email" onChange = {(e) => setEmail(e.target.value)}></input>
             </div>
             <div className ="box">
-                <input type = "password" value= {password} placeholder = "Password" onChange = {(e) => setPassword(e.target.value)}></input>
+                <input type = {visible ? "text": "password"} value= {password} placeholder = "Password" onChange = {(e) => setPassword(e.target.value)}></input>
             </div>
             <p>Already Have an Account <Link to = "/Login">Login Now</Link></p>
             <button onClick = {handleSubmit}>SignUp</button>

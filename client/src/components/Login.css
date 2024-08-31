@@ -70,3 +70,12 @@
     cursor: pointer;
 }
 
+.icons-span{
+    position: absolute;
+    height: 100%;
+    align-items: center;
+    left: 1050px;
+    display: absolute;
+}
+
+
