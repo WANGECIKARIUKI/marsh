@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: georgia, serif;
   }
   
   .hero {
     display: flex;
-    height: 60vh;
+    height: 70vh;
     position: relative;
     overflow: hidden;
     /* background-color: black; */
@@ -23,7 +23,7 @@
     flex-direction: column;
     max-width: 1200px;
     width: 100%;
-    color: black;
+    color: lightblue;
     margin-inline: auto;
     text-align: left;
     justify-content: left;
@@ -31,7 +31,7 @@
   }
   
   .content h1 {
-    font-size: 56px;
+    font-size: 40px;
     font-weight: bolder;
     color: coral;
   }
@@ -91,6 +91,7 @@
     text-align: left;
     justify-content: left;
     align-items: left;
+    font-weight: georgia, serif;
   }
   .hero1 {
     display: flex;
@@ -153,6 +154,53 @@
   .btn-primary.is-disabled {
     opacity: .5;
   }
+  .hero2 {
+    display: flex;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    /* background-color: black; */
+    background-size: cover;
+    background-position: center center;
+    /*box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5); */
+    background-color: lightblue transparent;
+  }
   
+  .content2 {
+    /* border: 1px purple solid; */
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    color: black;
+    margin-inline: auto;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+  }
 
+  hero4 {
+    display: flex;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    /* background-color: black; */
+    background-size: cover;
+    background-position: center center;
+    /*box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5); */
+    background-color: lightblue transparent;
+  }
+  
+  .content4{
+    /* border: 1px purple solid; */
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    color: black;
+    margin-inline: auto;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+  }
 

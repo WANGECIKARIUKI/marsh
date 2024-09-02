@@ -28,7 +28,8 @@ function Navbar() {
 </li>
 
 <li class="nav-item dropdown">
-<Link to = './General Features' class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+<Link to = './Features' class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 General Features
 </Link>
 <ul class="dropdown-menu">
@@ -44,6 +45,10 @@ General Features
 <li><Link to = './Socialnetwork' class="dropdown-item">
 Social Network Features
 </Link></li>
+<li><Link to = './Features' class="dropdown-item">
+All Features
+</Link></li>
+
 </ul>
 
 
@@ -56,7 +61,9 @@ Social Network Features
 <ul class="dropdown-menu">
 <li><Link to= "./Whatsapp" class="dropdown-item">Whatsapp</Link></li>
 <li><Link to= "./Snapchat" class="dropdown-item">Snapchat</Link></li>
-<li><Link to= "./X" class="dropdown-item">x</Link></li>
+<li><Link to= "./Facebook" class="dropdown-item">Facebook</Link></li>
+<li><Link to= "./Instagram" class="dropdown-item">Instagram</Link></li>
+<li><Link to= "./Twitter" class="dropdown-item">Twitter</Link></li>
 </ul>
 </li>
 

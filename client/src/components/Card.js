@@ -7,7 +7,7 @@ function Card(props){
     return (
         <Container>
             <span style={{ color: "coral" }}> <Icon /> </span>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <p>{disc}</p>
 
         </Container>
@@ -24,10 +24,11 @@ text-align: center;
 span{
 font-size: 4rem;}
 
-h1{
+h2{
 font-size: 1.2rem;
 padding-bottom: 1rem;}
 font-weight: bold;
+color: black;
 
 p{
 font-size: 0.rem;}
