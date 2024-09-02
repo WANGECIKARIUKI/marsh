@@ -8,12 +8,12 @@
 
 .main-container-signup
 {
-    background: white;
+    background: blue;
     padding: 20px 30px;
     margin: 0px auto;
     width: 400px;
     margin-top: 100px;
-    border-top: 5px solid peachpuff;
+    border-top: 5px solid coral;
 }
 
 .main-container-signup .header
@@ -24,7 +24,7 @@
 .main-container-signup .header h1
 {
     text-align: center;
-    color: black;
+    color: coral;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
@@ -44,7 +44,7 @@
     outline: none;
     border: none;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid blue;
 }
 
 .main-container-signup p
@@ -63,7 +63,7 @@
     padding: 10px 30px;
     border: none;
     outline: none;
-    background: peachpuff;
+    background: coral;
     border-radius: 5px;
     color: black;
     font-weight: 600;

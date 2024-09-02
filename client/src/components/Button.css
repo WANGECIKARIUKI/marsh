@@ -1,0 +1,27 @@
+:root {
+    --primary: blue;
+    background: blue
+  }
+  
+  .btn-up {
+    padding: 4px 12px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .btn-up:hover {
+    transition: all 0.3s ease-out;
+    background: coral;
+    color: black;
+    padding: 6px 16px;
+    border-radius: 10px;
+    border: 2px solid coral;
+    
+  }
+  .btn-up{
+    background-color:blue;
+    color: black;
+  }
