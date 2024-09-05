@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import './Signup.css';
 import {Link} from 'react-router-dom';
 import firebase from './firebaseConfig';
-import { FaEye, FaEyeSlash} from "react-icons/fa";
 import './Button.css';
+
 
 
 function Signup(){
@@ -47,7 +47,7 @@ function Signup(){
                 
             </div>
             
-            <p>Already Have an Account <Link to = "/Login">Login Now</Link></p>
+            <p style = {{textAlign: "center", padding: "2px"}}>Already Have an Account <Link to = "/Login">Login Now</Link></p>
             <button onClick = {handleSubmit}>SignUp</button>
         </div>
         </>

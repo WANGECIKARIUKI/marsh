@@ -7,6 +7,7 @@ import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Footer from "./Footer"
 
 //add locales - of the country your calendar will be based on
 const locales = {
@@ -83,7 +84,8 @@ function NormalCalendar() {
                   Add Event
               </button>
           </div>
-          <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} /> 
+          <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" , color: "black"}} /> 
+          <Footer />
       </div>
   );
 }

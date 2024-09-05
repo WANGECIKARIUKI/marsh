@@ -1,46 +1,46 @@
 import React from 'react';
 //import {Link} from 'react-router-dom';
-import image17 from '../components/images/image17.jpeg';
+import screen1 from '../components/images/screen1.jpeg';
+import { FaFirefox } from "react-icons/fa";
 import  '../components/Home.css';
 import styled from 'styled-components';
 import {useNavigate} from "react-router-dom";
 import { Bs1CircleFill } from "react-icons/bs";
 import { Bs2CircleFill } from "react-icons/bs";
 import { Bs3CircleFill } from "react-icons/bs";
+import { MdOutlineStopScreenShare } from "react-icons/md";
+import { BsPhoneFlip } from "react-icons/bs";
 import { SiLetsencrypt } from "react-icons/si";
 import { RiCustomerService2Line } from "react-icons/ri";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
-import { MdOutlineInstallMobile } from "react-icons/md";
-import { PiGlobeStandFill } from "react-icons/pi";
-import { FcApproval } from "react-icons/fc";
+import { MdPriceCheck } from "react-icons/md";
 
 
 
-function Whatsapp() {
+function Screenrecorder() {
   const navigate = useNavigate();
 
   return (
     <>
-    <section className="hero" style={{ backgroundImage: `url(${image17})` }}>
+    <section className="hero" style={{ backgroundImage: `url(${screen1})` }}>
       <div className="content">
-        
-        <h1 style = {{padding: "20px", textAlign: "center"}}>WhatsApp Tracker.</h1>
-        <p>Find out the advanced access to the person's WhatsApp activity. All information from the WhatsApp app will be available for you in your account. Start monitoring with RedSpy in 3 simple steps.</p>
+        <h1 style = {{padding: "20px"}}>Screen Records Tracker.</h1>
+        <p>
+          Redspy presents the modern feature enabling access to screen records of the target device be known. Benefits of gps location tracker are listed below.
+        </p>
         <ul class ="list-coil-hook-black pt-2">
           {" "}
 
-<li>Obtain full access to incoming and outgoing chats.</li>
+<li>Get the screen records of the target device in real time.</li>
 
-<li>Reveal archived and locked chats.</li>
+<li>Get detailed records information including the deleted ones remotely.</li>
 
-<li>Access their voice notes.</li>
+<li>Know the kind of information is being screen recorded.</li>
 
-<li>Get access to old and deleted chats undetected.</li>
+<li>Parents will know the kind of information being screen recorded by their children at all times.</li>
 
-<li>Extract their shared and received media files, documents and links.</li>
-
-<li>Access both incoming and outgoing voice and video calls.</li>
+<li>Affordable packages at Redspy.</li>
 
 
           
@@ -54,7 +54,7 @@ navigate("/Signup");}} >Get Started</button>
     <section className="hero2" style={{ backgroundColor: "lightblue" }}>
     <div className="content2">
       <Container id = "features">
-        <h1 style = {{textAlign: "center"}}> How to Install</h1>
+        <h1> How to Install</h1>
         <Cards>
       
         {" "}
@@ -62,16 +62,16 @@ navigate("/Signup");}} >Get Started</button>
         <Card 
         Icon = {Bs1CircleFill}
         title = {"Account Creation"}
-        disc = {"Enter you Email address and a password you won't forget to create your account. Choose the subscription plan that best suites you, complete the order and proceed to step 2."}/>
+        disc = {"Enter you Email address and a password you won't forget to create your account. Then Select the subscription plan that will be the best for your needs. Complete the order and receive further instructions."}/>
         <Card 
         Icon = {Bs2CircleFill}
-        title = {"Installation"}
-        disc={"Install the app on Android device manually, for iOS devices you will need their iCloud credentials to proceed. This process is not time consuming."}/>
+        title = {"App Installation"}
+        disc={"Install the app on the target device for android, enter iCloud credentials for iPhone. Then follow the instructions detailed on how to install the app."}/>
 
         <Card 
         Icon = {Bs3CircleFill}
         title = {"Start Monitoring"}
-        disc = {"Visit your RedSpy account and check the detailed report from the target's device. RedSpy will arrange the results in an easy way for you to understand in the shortest time possible."}/>
+        disc = {"Log in to your account and wait until devices are connected and the required information starts to be sent. It takes only a few minutes."}/>
 
 
       </Cards>
@@ -80,28 +80,29 @@ navigate("/Signup");}} >Get Started</button>
     </div>
   </section> 
 
+
     <section className="hero6" style={{ backgroundColor: "white" }}>
       <div className="content6">
         <Container id = "features">
-          <h1> Why you should choose RedSpy</h1>
+          <h1> Why purchase Redspy Screen Records Tracker</h1>
           <Cards>
         
           {" "}
 
           <Card 
-          Icon = {MdOutlineInstallMobile}
+          Icon = {MdOutlineStopScreenShare}
           title =
-          {"Fast and Easy Installation"}
-          disc = {"Tracking is enabled immediately. You don't need to have some technical knowledge to complete the installation the instructions are listed down and it will only take a few minutes to set up the account and start tracking."}/>
+          {"Undetectable Tracking"}
+          disc = {"Monitor data from any device without the owner being aware. Our software operates in a hidden mode, leaving no visible signs of its presence."}/>
           <Card 
-          Icon = {PiGlobeStandFill }
-          title = {"Real-time updates"}
-          disc={"It will take you atmost 3 minutes to get an update on what you are currently tracking and get the report which is summarised in a way you will understand. The app gathers data regularly and no important information will be missed."}/>
+          Icon = {BsPhoneFlip }
+          title = {"Compatible with every device"}
+          disc={"Our software works on every smartphone regardless of the operating  system."}/>
 
           <Card 
-          Icon = {FcApproval}
-          title = {"Access to Alot of the Phone Applications"}
-          disc = {"RedSpy is designed to access and track all applications installed on the target's device and it is compatible with both iOS and Android devices."}/>
+          Icon = {FaFirefox}
+          title = {"Get updated Information"}
+          disc = {"Our sofware offers real time and updated information on the device you are tracking. The updates take place every 2 to 3 minutes."}/>
 
           <Card 
           Icon = { SiLetsencrypt }
@@ -113,10 +114,17 @@ navigate("/Signup");}} >Get Started</button>
           title = {"Support at All Times"}
           disc = {"We have a 24/7 customer support agency, where your needs are met and problms resolved in the shortest time possible."}/>
 
+        <Card 
+          Icon = {MdPriceCheck}
+          title = {"Friendly Prices and Discounts"}
+          disc = {"We have packages that are pocket friendly and affordable. We also offer discounts on our packages."}/>
+
+
 
 
         </Cards>
         </Container>
+
     
       </div>
 
@@ -143,7 +151,7 @@ navigate("/Signup");}} >Get Started</button>
   );
 }
 
-export default Whatsapp;
+export default Screenrecorder;
 
 const Container = styled.div`
 width: 80%;

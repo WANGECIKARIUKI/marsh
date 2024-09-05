@@ -1,11 +1,11 @@
 :root {
-    --primary: blue;
-    background: blue
+    --primary:white;
+    background: white;
   }
   
   .btn-up {
-    padding: 4px 12px;
-    border-radius: 2px;
+    padding: 4px;
+    border-radius: 4px;
     outline: none;
     border: none;
     font-size: 18px;
@@ -14,14 +14,14 @@
   
   .btn-up:hover {
     transition: all 0.3s ease-out;
-    background: coral;
+    background: red;
     color: black;
     padding: 6px 16px;
     border-radius: 10px;
-    border: 2px solid coral;
+    border: 2px;
     
   }
   .btn-up{
-    background-color:blue;
-    color: black;
+    background-color:white;
+    color: blue;
   }

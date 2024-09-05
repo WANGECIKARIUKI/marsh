@@ -8,7 +8,7 @@
 
 .main-container-signup
 {
-    background: blue;
+    background: white;
     padding: 20px 30px;
     margin: 0px auto;
     width: 400px;
@@ -44,7 +44,7 @@
     outline: none;
     border: none;
     border-radius: 5px;
-    border: 1px solid blue;
+    border: 1px solid transparent;
 }
 
 .main-container-signup p
@@ -63,7 +63,6 @@
     padding: 10px 30px;
     border: none;
     outline: none;
-    background: coral;
     border-radius: 5px;
     color: black;
     font-weight: 600;

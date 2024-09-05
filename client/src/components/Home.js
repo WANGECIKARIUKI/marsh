@@ -1,7 +1,5 @@
 
 import React from 'react';
-import Button from './Button';
-//import {Link} from 'react-router-dom';
 import image17 from './images/image17.jpeg';
 import { FaFirefox } from "react-icons/fa";
 import  './Home.css';
@@ -22,6 +20,11 @@ import { MdOutlineStopScreenShare } from "react-icons/md";
 import { BsPhoneFlip } from "react-icons/bs";
 import { SiLetsencrypt } from "react-icons/si";
 import { RiCustomerService2Line } from "react-icons/ri";
+import { FcAndroidOs } from "react-icons/fc";
+import { BsApple } from "react-icons/bs";
+import { FcSmartphoneTablet } from "react-icons/fc";
+import { BsFillFileBreakFill } from "react-icons/bs";
+import Footer from "./Footer"
 
 function Home() {
   const navigate = useNavigate();
@@ -30,21 +33,22 @@ function Home() {
     <>
     <section className="hero" style={{ backgroundImage: `url(${image17})` }}>
       <div className="content">
-        <h1>Your Security Simplified.</h1>
+        <h1 style = {{padding: "20px"}}>Your Tracking Simplified.</h1>
+        <p>The number one app to keep you updated on what your kids are upto, the last location visited and any other information you might want to access on a target's device.</p>
         <ul class ="list-coil-hook-black pt-2">
           {" "}
 
-<li>Real-time alerts: Receive instant notifications for any suspicious activity.</li>
+<li>Review sent, received and deleted text messages.</li>
 
-<li>HD video surveillance: Monitor your property from anywhere with crystal-clear video.</li>
+<li>Access present and past location history.</li>
 
-<li>Smart home integration: Seamlessly connect your security system to other smart devices.</li>
+<li>Check their social media interactivity: read chats, comments and liked posts.</li>
 
-<li>Customizable settings: Tailor your security plan to your specific needs.</li>
+<li>Access all fliles on the phone, screen records, audios and photos.</li>
 
-<li>Professional monitoring: 24/7 surveillance by trained security experts.</li>
+<li>Access incoming, outgoing, missed and deleted calls.</li>
 
-<li>Experience the future of home and business security.</li>
+<li>24/7 customer support.</li>
 
 
           
@@ -84,24 +88,42 @@ navigate("/Signup");}} >Get Started</button>
 navigate("/Signup");}} >Get Started</button>
   
     </div>
-
-    
   </section> 
 
-    <section className="hero" style={{ backgroundColor: "white" }}>
-      <div className="content">
-        <h1></h1>
-        <p>
-          {" "}
-          Hello World!
-        </p>
-        <button type="button" className="btn btn-primary mb1 teal" onClick = {() =>{
-navigate("/Signup");}} >Get Started</button>
-
-      </div>
-
+  <section className="hero1" style={{ backgroundColor: "white" }}>
+    <div className="content1">
+      <Container id = "features">
+        <h1> Solutions We Offer</h1>
+        <Cards>
       
-    </section> 
+        {" "}
+
+        <Card 
+        Icon = {FcAndroidOs}
+        title = {"Android Tracking"}
+        disc = {"Comptible with all android phones, easy install and registration process, totally hidden, protected data and very confidential."}/>
+        <Card 
+        Icon = {BsApple}
+        title = {"Iphone tracking"}
+        disc={"Compatible with all Iphones regardless of the IoS version, easy install, icloud friendly, encrypted data, best packages you can get."}/>
+
+        <Card 
+        Icon = {FcSmartphoneTablet}
+        title = {"Ipad and Tablet Tracking"}
+        disc = {"Compatible with both an Ipad and a tablet, hidden and you can monitor the activities on the device, helps in parental control as you can restrict the sites your child visits."} />
+      </Cards>
+
+      <Card 
+        Icon = {BsFillFileBreakFill }
+        title = {"No Jailbreaking & Rooting"}
+        disc = {"The services we offer are very affordable and they do not require alot of effort like jailbreaking in order to access the devic's activities."} />
+
+      </Container>
+      <button type="button" className="btn btn-primary mb1 teal" onClick = {() =>{
+navigate("/Signup");}} >Get Started</button>
+  
+    </div>
+  </section> 
 
     <section className="hero1" style={{ backgroundColor: "lightblue" }}>
       <div className="content1">
@@ -152,8 +174,8 @@ navigate("/Signup");}} >Get Started</button>
       
     </section>
 
-    <section className="hero4" style={{ backgroundColor: "white" }}>
-      <div className="content4">
+    <section className="hero6" style={{ backgroundColor: "white" }}>
+      <div className="content6">
         <Container id = "features">
           <h1> Why Choose Us?</h1>
           <Cards>
@@ -195,7 +217,8 @@ navigate("/Signup");}} >Get Started</button>
       </div>
 
       
-    </section>  
+    </section>
+    <Footer />  
 </>
   );
 }
@@ -214,7 +237,7 @@ width: 80%;
   h1 {
     padding-top: 1rem;
     font-weight: bolder;
-    color: coral;
+    color: red;
     font-size: 3rem;
   }
     h2 {

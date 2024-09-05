@@ -16,19 +16,21 @@ import Location from './Inc/Location';
 import Messages from './Inc/Messages';
 import Snapchat from './Inc/Snapchat';
 import Photos from './Inc/Photos';
-//import Card from '.components/Card';
+import Browser from './Inc/Browser';
 import Dashboard from './components/Dashboard';
+import Footer from './components/Footer';
+import Calls from './Inc/Calls';
+import Screenrecorder from './Inc/Screenrecorder';
+import Audio from './Inc/Audio';
+import Socials from './Inc/Socials';
+import Demo from './components/Demo';
+
+
 
 
 
 
 function App() {
-
- //const [contacts, setContacts] = useState('');
-  //const addContact = (newContact => {
-    //setContacts([...contacts, newContact])
-  //})
-
 
   return (
     <div className="App">
@@ -51,6 +53,14 @@ function App() {
         <Route path = "/Photos" element = {<Photos/>} />
         <Route path = "/Dashboard" element = {<Dashboard/>} />
         <Route path = "/Features" element = {<Features/>} />
+        <Route path = "/Browser" element = {<Browser/>} />
+        <Route path = "/Footer" element = {<Footer/>} />
+        <Route path = "/Calls" element = {<Calls/>} />
+        <Route path = "/Demo" element = {<Demo/>} />
+        <Route path = "/Screenrecorder" element = {<Screenrecorder/>} />
+        <Route path = "/Audio" element = {<Audio/>} />
+        <Route path = "/Socials" element = {<Socials/>} />
+  
 
 
       

@@ -6,6 +6,7 @@ import { FaEye, FaEyeSlash} from "react-icons/fa";
 
 
 
+
 function Login(){
 
     
@@ -50,9 +51,11 @@ function Login(){
                     }
             </span>
             </div>
+            <p><a href = "/forgotpassword">Forgot password</a></p>
             <p>Don't Have an Account <Link to = "/Signup">Create Account</Link></p>
             <button onClick = {handleSubmit}>Login</button>
         </div>
+
         </>
     )
 }

@@ -9,11 +9,14 @@
 .main-container-signup
 {
     background: white;
-    padding: 20px 30px;
+    padding: 40px 20px;
     margin: 0px auto;
-    width: 400px;
-    margin-top: 100px;
-    border-top: 5px solid peachpuff;
+    width: 500px;
+    margin-top: 150px;
+    border-top: 30px solid white;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
 }
 
 .main-container-signup .header
@@ -44,7 +47,7 @@
     outline: none;
     border: none;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid black;
 }
 
 .main-container-signup p
@@ -63,9 +66,9 @@
     padding: 10px 30px;
     border: none;
     outline: none;
-    background: peachpuff;
+    background: lightblue;
     border-radius: 5px;
-    color: black;
+    color: coral;
     font-weight: 600;
     cursor: pointer;
 }
@@ -76,6 +79,7 @@
     align-items: center;
     left: 1050px;
     display: absolute;
+    color: coral
 }
 
 

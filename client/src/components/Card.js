@@ -6,7 +6,7 @@ function Card(props){
     const {Icon, disc,title} = props;
     return (
         <Container>
-            <span style={{ color: "coral" }}> <Icon /> </span>
+            <span style={{ color: "red" }}> <Icon /> </span>
             <h2>{title}</h2>
             <p>{disc}</p>
 
