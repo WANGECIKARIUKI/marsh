@@ -22,8 +22,26 @@ function Navbar() {
                 </li>
 
                 <li class="nav-item">
-                    <Link to = "./Dashboard"class="nav-link active" aria-current="page">Dashboard-Demo</Link>
+                    <Link to = "./dashboard"class="nav-link active" aria-current="page">Dashboard-Demo</Link>
                 </li>
+
+                <li class="nav-item">
+                    <Link to = "./Pricing"class="nav-link active" aria-current="page">Pricing</Link>
+                </li>
+
+                <li class="nav-item">
+                    <Link to = "./ClientDashboard"class="nav-link active" aria-current="page">Client Dashboard</Link>
+                </li>
+
+                <li class="nav-item">
+                    <Link to = "./Sidebar"class="nav-link active" aria-current="page">Sidebar</Link>
+                </li>
+
+                <li class="nav-item">
+                    <Link to = "./Admin"class="nav-link active" aria-current="page">Admin</Link>
+                </li>
+
+
 
                 <li class="nav-item dropdown">
 
@@ -31,7 +49,6 @@ function Navbar() {
                               General Features
                     </Link>
                 <ul class="dropdown-menu">
-                    <li><Link to= "./Calendar" class="dropdown-item">Calendar</Link></li>
                     <li><Link to= "./Browser" class="dropdown-item">Browser</Link></li>
                     <li><Link to= "./Contacts" class="dropdown-item">Contacts</Link></li>
                     <li><Link to= "./Message" class="dropdown-item">Message</Link></li>

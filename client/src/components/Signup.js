@@ -49,6 +49,8 @@ function Signup(){
             
             <p style = {{textAlign: "center", padding: "2px"}}>Already Have an Account <Link to = "/Login">Login Now</Link></p>
             <button onClick = {handleSubmit}>SignUp</button>
+
+
         </div>
         </>
     )

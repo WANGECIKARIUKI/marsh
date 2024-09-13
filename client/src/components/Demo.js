@@ -14,6 +14,7 @@ function Demo() {
       {isDemoActive ? (
         <div>
           {/* Demo content here */}
+          <a href = "http://localhost:3000/Contacts">Contacts</a>
           <Link to = "./" class="nav-link active" aria-current="page">Home</Link>
           <Link to= "./Contacts" class="dropdown-item">Contacts</Link>
           

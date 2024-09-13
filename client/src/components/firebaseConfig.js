@@ -4,6 +4,7 @@ import 'firebase/compat/database';
 //import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyCjUogGjTRSDHKhme8MwHHFFm4XRuYmsD4",
   authDomain: "marsh-b2ad5.firebaseapp.com",
