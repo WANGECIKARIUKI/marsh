@@ -16,7 +16,6 @@ import Messages from './Inc/Messages';
 import Snapchat from './Inc/Snapchat';
 import Photos from './Inc/Photos';
 import Browser from './Inc/Browser';
-import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';
 import Calls from './Inc/Calls';
 import Screenrecorder from './Inc/Screenrecorder';
@@ -32,15 +31,29 @@ import AudioRecordings from './Inc/AudioRecordings';
 import ContactLogs from './Inc/ContactLogs';
 import ClientDashboard from './ClientDashboard';
 //import AdminDashboard from './components/AdminDashboard';
-import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Pricing from './components/Pricing';
 import Admin from './components/Admin';
 import Google from './components/Google';
 import Payment from './components/Payment';
+import Topbar from "./scenes/global/Topbar";
+import Sidebar from "./scenes/global/Sidebar";
+import Dashboard from "./scenes/dashboard";
+import  Team from "./scenes/team";
+import  Invoices from "./scenes/invoices";
+import  Contact from "./scenes/contacts";
+import  Bar from "./scenes/bar";
+import  Form from "./scenes/form";
+import  Line from "./scenes/line";
+import  Pie from "./scenes/pie";
+import  FAQ from "./scenes/faq";
+import  Geography from "./scenes/Geography";
+import  { CssBaseline, ThemeProvider } from "@mui/material";
+import  { ColorModeContext, useMode } from "./theme";
+import  Calendar from "./scenes/calendar";
+
 //import Footer from './Inc/Footer';
-//import "./App.scss";
-//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+ //import "./App.scss"; import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 
@@ -49,13 +62,16 @@ import Payment from './components/Payment';
 
 
 function App() {
+   const [theme, colorMode] = useMode();
+  const [isSidebar, setIsSidebar] = useState(true);
+
 
   return (
     <div className="App">
-      
       <Navbar />
       <div className="bg-slate-600 w-full h-screen"></div>
       <Routes>
+
         <Route path = '/' element = {<Home />} />
         <Route path = '/Signup' element = {<Signup/>} />
         <Route path = '/Contacts' element = {<Contacts/>} />
@@ -83,6 +99,32 @@ function App() {
         <Route path = "/Admin" element = {<Admin/>} />
         <Route path = "/Google" element = {<Google/>} />
         <Route path = "/Payment" element = {<Payment/>} />
+        <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <div className="app">
+          <Sidebar isSidebar={isSidebar} />
+          <main className="content">
+            <Topbar setIsSidebar={setIsSidebar} />
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/contacts" element={<Contact />} />
+              <Route path="/invoices" element={<Invoices />} />
+              <Route path="/form" element={<Form />} />
+              <Route path="/bar" element={<Bar />} />
+              <Route path="/pie" element={<Pie />} />
+              <Route path="/line" element={<Line />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/geography" element={<Geography />} />
+              </Routes>
+          </main>
+        </div>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+       
+    
 
         <Route element = {<ProtectedRoutes/>}>
             
@@ -102,6 +144,7 @@ function App() {
         
       
       </Routes>
+      
 
 
     </div>

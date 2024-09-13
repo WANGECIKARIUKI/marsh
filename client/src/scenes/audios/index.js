@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Calendar(){
+function Audio(){
 
     return(
         <div>
@@ -8,5 +8,3 @@ function Calendar(){
         </div>
     )
 }
-
-export default Calendar;

@@ -22,20 +22,17 @@ function Navbar() {
                 </li>
 
                 <li class="nav-item">
-                    <Link to = "./dashboard"class="nav-link active" aria-current="page">Dashboard-Demo</Link>
+                    <Link to = "./dashboard"class="nav-link active" aria-current="page">Dashboard</Link>
+                </li>
+
+                <li class="nav-item">
+                    <Link to = "./ClientDashboard"class="nav-link active" aria-current="page">Client-Dashboard</Link>
                 </li>
 
                 <li class="nav-item">
                     <Link to = "./Pricing"class="nav-link active" aria-current="page">Pricing</Link>
                 </li>
 
-                <li class="nav-item">
-                    <Link to = "./ClientDashboard"class="nav-link active" aria-current="page">Client Dashboard</Link>
-                </li>
-
-                <li class="nav-item">
-                    <Link to = "./Sidebar"class="nav-link active" aria-current="page">Sidebar</Link>
-                </li>
 
                 <li class="nav-item">
                     <Link to = "./Admin"class="nav-link active" aria-current="page">Admin</Link>
