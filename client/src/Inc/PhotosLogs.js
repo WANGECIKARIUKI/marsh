@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Calendar(){
+function PhotosLogs(){
 
     return(
         <div>
@@ -9,4 +9,4 @@ function Calendar(){
     )
 }
 
-export default Calendar;
+export default PhotosLogs;

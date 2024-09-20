@@ -7,7 +7,7 @@ function ProtectedRoutes (){
     const user = null;
 
     return (
-        user ? <Outlet /> : <Navigate to = "/Signup" />
+        user ? <Outlet /> : <Navigate to = "/Login" />
     )
 }
 

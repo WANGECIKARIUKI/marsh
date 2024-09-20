@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Photos(){
+function WhatsappLogs(){
 
     return(
         <div>
@@ -9,4 +9,4 @@ function Photos(){
     )
 }
 
-export default Photos;
+export default WhatsappLogs;

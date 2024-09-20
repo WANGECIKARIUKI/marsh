@@ -4,6 +4,7 @@
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
+    
 }
 
 .main-container-signup
@@ -17,6 +18,7 @@
     text-align: center;
     justify-content: center;
     border-radius: 20px;
+    border: 2px solid grey;
 }
 
 .main-container-signup .header
@@ -57,6 +59,7 @@
     color: black;
     margin-left: 45%;
     font-weight: 600;
+    text-align: left;
 }
 
 .main-container-signup button
@@ -71,6 +74,9 @@
     color: coral;
     font-weight: 600;
     cursor: pointer;
+    display: block;
+    justify-content: center;
+    text-align: center;
 }
 
 .icons-span{
@@ -80,6 +86,14 @@
     left: 1050px;
     display: absolute;
     color: coral
+}
+
+.main-container-signup span{
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+    font-weight: 300;
 }
 
 

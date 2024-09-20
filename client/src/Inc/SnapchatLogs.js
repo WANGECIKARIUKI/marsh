@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Audio(){
+function SnapchatLogs(){
 
     return(
         <div>
@@ -8,3 +8,5 @@ function Audio(){
         </div>
     )
 }
+
+export default SnapchatLogs;

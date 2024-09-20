@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+//import ButtonWithPopup from './ButtonWithPopUp';
 
 function Demo() {
   const [isDemoActive, setIsDemoActive] = useState(false);
+  const navigate = useNavigate();
+  const isComplete = true;
+
+  if (isComplete){
+    navigate('/Pricing');
+  } else {
+    navigate('/')
+  }
 
   const demoButtonHandler = () => {
+    alert(
+      "Please note that the live demo provides real-time data from multiple active devices, including your own, Only an activated account can add or disconnect devices for monitoring at any time."
+      )
     setIsDemoActive(!isDemoActive);
     // Optionally start a timer here if you want to limit the demo's duration
   };
@@ -20,8 +33,9 @@ function Demo() {
           
         </div>
       ) : (
-        <button onClick={demoButtonHandler}>Start Demo</button>
+        <button  onClick={demoButtonHandler}>Start Demo</button>
       )}
+
     </div>
   );
 }

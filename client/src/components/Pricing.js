@@ -9,12 +9,13 @@ function Pricing() {
 
   const navigate = useNavigate();
   
+  
   return (
     <div class="container py-5">
        <div class="text-center">
-        <h3>Pricing</h3>
+        <h3 style = {{color: "black", fontSize: "1rem"}}>Pricing</h3>
         <div class="line"></div>
-        <p class="mt-2">Choose the plan that is best for you.</p>
+        <p class="mt-2" style = {{color: "black", fontSize: "1.2rem"}}>Choose the plan that is best for you.</p>
         <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
             <div class="col">
               <div class="card">

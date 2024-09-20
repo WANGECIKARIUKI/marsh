@@ -2,7 +2,7 @@
   text-align: center;
   background-color: white;
   color: lightblue;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .main-heading{
@@ -18,3 +18,8 @@
   margin-bottom: 10px;
 }
 
+@media(max-width: 700px) {
+  .hero h1 {
+      font-size: 24px;
+  }
+}

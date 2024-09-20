@@ -21,25 +21,6 @@ function Navbar() {
                     <Link to = "./" class="nav-link active" aria-current="page">Home</Link>
                 </li>
 
-                <li class="nav-item">
-                    <Link to = "./dashboard"class="nav-link active" aria-current="page">Dashboard</Link>
-                </li>
-
-                <li class="nav-item">
-                    <Link to = "./ClientDashboard"class="nav-link active" aria-current="page">Client-Dashboard</Link>
-                </li>
-
-                <li class="nav-item">
-                    <Link to = "./Pricing"class="nav-link active" aria-current="page">Pricing</Link>
-                </li>
-
-
-                <li class="nav-item">
-                    <Link to = "./Admin"class="nav-link active" aria-current="page">Admin</Link>
-                </li>
-
-
-
                 <li class="nav-item dropdown">
 
                     <Link to = './Features' class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -56,6 +37,29 @@ function Navbar() {
                     <li><Link to= "./Photos" class="dropdown-item">Photos</Link></li>
                     <li><Link to = './Socials' class="dropdown-item">Socials</Link></li>
                     <li><Link to = './Features' class="dropdown-item">All Features</Link></li>
+                </ul>
+                </li>
+
+
+                <li class="nav-item dropdown">
+
+                    <Link to = './MonitoringApp' class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Monitoring Apps
+                    </Link>
+                <ul class="dropdown-menu">
+                    <li><Link to= "./BrowserLogs" class="dropdown-item">Browser Logs</Link></li>
+                    <li><Link to= "./ContactLogs" class="dropdown-item">Contact Logs</Link></li>
+                    <li><Link to= "./SMSLogs" class="dropdown-item">SMS</Link></li>
+                    <li><Link to= "./CallLogs" class="dropdown-item">Call Logs</Link></li>
+                    <li><Link to= "./LocationLogs" class="dropdown-item">Location Log</Link></li>
+                    <li><Link to= "./ScreenrecordingLogs" class="dropdown-item">Screenrecorder Logs</Link></li>
+                    <li><Link to= "./AudioRecordings" class="dropdown-item">Audio-Recordings</Link></li>
+                    <li><Link to= "./PhotosLogs" class="dropdown-item">Photos Log</Link></li>
+                    <li><Link to = './TwitterLogs' class="dropdown-item">Twitter Logs</Link></li>
+                    <li><Link to = './WhatsappLogs' class="dropdown-item">Whatsapp Logs</Link></li>
+                    <li><Link to= "./SnapchatLogs" class="dropdown-item">Snapchat Logs</Link></li>
+                    <li><Link to= "./InstagramLogs" class="dropdown-item">Instagram Logs</Link></li>
+                    
                 </ul>
                 </li>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Socials(){
+function TwitterLogs(){
 
     return(
         <div>
@@ -9,4 +9,4 @@ function Socials(){
     )
 }
 
-export default Socials;
+export default TwitterLogs;

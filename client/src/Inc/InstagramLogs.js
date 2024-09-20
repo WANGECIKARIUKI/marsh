@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Camera(){
+function InstagramLogs(){
 
     return(
         <div>
@@ -9,4 +9,4 @@ function Camera(){
     )
 }
 
-export default Camera;
+export default InstagramLogs;

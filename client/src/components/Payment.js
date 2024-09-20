@@ -2,6 +2,7 @@ import { useState } from "react";
 //import { ethers } from "ethers";
 import ErrorMessage from "./ErrorMessage";
 import TxList from "./TxList";
+import "./payment.css"
 
 
 const ethers = require("ethers");
@@ -48,20 +49,22 @@ function Payment() {
           <div class="col">
               <div class="card">
                <h2 class="mt-4">Payment Instructions</h2>
-               <h2 class="doller">To Activate your account and access the RedSpy System Follow the instructions Below.</h2>
+               <h2 class="header" style = {{color: "coral", fontSize: "1.1rem", textAlign: "center"}}>To Activate your account.</h2>
+               <h3 class="header" style = {{color: "coral", fontSize: "1.1rem", textAlign: "center"}}>Follow the instructions Below.</h3>
                 <div class="card-body">
-                 <p class="card-text"><i class="bi bi-arrow-right-circle"></i> Currency will be <strong>USDT</strong>.</p>
-                 <p class="card-text"><i class="bi bi-arrow-right-circle"></i> Wallet Address: .</p>
+                 <p style={{textAlign: "center", fontSize: "1rem"}}class="card-text"><i class="bi bi-arrow-right-circle"></i> Currency will be <strong>USDT</strong>.</p>
+                 <p class="card-text"><i class="bi bi-arrow-right-circle"></i> Wallet Address : <strong> 0xa1a582aE3979ec09ec925b662BeB356E375d35aE</strong>.</p>
                  <p class="card-text"><i class="bi bi-arrow-right-circle"></i> Network: Ethereum (ERC20).</p>
                  <p class="card-text"><i class="bi bi-arrow-right-circle"></i> Subscription Amount: $300 USDT.</p>
                  <p class="card-text"><i class="bi bi-arrow-right-circle"></i> Subscription Duration: 12 Months.</p>
                  <p class="card-text"><i class="bi bi-arrow-right-circle"></i> Device Monitoring: Maximum 5 Devices.</p>
                  <p class="card-text"><i class="bi bi-arrow-right-circle"></i> Ensure you also have an Ethereum Wallet or a MetaMask web application.</p>
-                 <h2 class = "mt-4">Further Instructions:</h2>
-                 <p class="card-text"><i class="bi bi-arrow-right-circle"></i> After Payment send an email to info@redspy.pro.</p>
+                 <h2 style = {{color: "coral"}}class = "mt-4">Further Instructions:</h2>
+                 <p class="card-text"><i class="bi bi-arrow-right-circle"></i> After Payment send an email to 
+                 <a href = "malito:hello@redspy.online"></a></p>
                  <p class="card-text"><i class="bi bi-arrow-right-circle"></i> On the email include your transaction ID(TxID) and the email you registered on our platform using.</p>
                  <p class="card-text"><i class="bi bi-arrow-right-circle"></i> Your account will be activated upon payment confirmation.</p>
-                 <p class="card-text"><i class="bi bi-arrow-right-circle"></i> <strong>Please Note:</strong>.</p>
+                 <p style = {{fontSize: "2rem", color:"coral"}} class="card-text"><i class="bi bi-arrow-right-circle"></i> <strong >Please Note:</strong></p>
                  <p class="card-text"><i class="bi bi-arrow-right-circle"></i> <em>Only send Tether (ERC20) assets to this address, other assets will be lost forever</em>.</p>
                  </div>
               </div>
