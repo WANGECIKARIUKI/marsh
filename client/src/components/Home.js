@@ -1,255 +1,366 @@
-
-import React from 'react';
-import image17 from './images/image17.jpeg';
-import { FaFirefox } from "react-icons/fa";
-import  './Home.css';
-import styled from 'styled-components';
-import Card from './Card.js';
-import { IoLogoWhatsapp } from "react-icons/io";
-import { IoIosText } from "react-icons/io";
-import { FaInstagram } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { IoMdPhotos } from "react-icons/io";
-import { IoCallSharp } from "react-icons/io5";
+import React, { useState } from 'react';
+import WhyChooseSlider from './WhyChooseSlider';
+import Footer from './Footer';
+//import { FaKeyboard, FaMapMarkerAlt, FaPhone, FaSearch, FaComments, FaTrash, FaImage } from 'react-icons/fa';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import './Home.css'; // Optional for additional custom styling
+import FAQ from './FAQ';
+import StepsToInstall from './StepstoInstall';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Reviews from './Reviews';
 import {useNavigate} from "react-router-dom";
-import { MdOutlineSupport } from "react-icons/md";
-import { Bs1CircleFill } from "react-icons/bs";
-import { Bs2CircleFill } from "react-icons/bs";
-import { Bs3CircleFill } from "react-icons/bs";
-import { MdOutlineStopScreenShare } from "react-icons/md";
-import { BsPhoneFlip } from "react-icons/bs";
-import { SiLetsencrypt } from "react-icons/si";
-import { RiCustomerService2Line } from "react-icons/ri";
-import { FcAndroidOs } from "react-icons/fc";
-import { BsApple } from "react-icons/bs";
-import { FcSmartphoneTablet } from "react-icons/fc";
-import { BsFillFileBreakFill } from "react-icons/bs";
-import Footer from "./Footer"
 
-function Home() {
+
+function Home(){
+  // State to track the current slide
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  //navigate to the sign up
+
   const navigate = useNavigate();
 
-  return (
-    <>
-    <section className="hero" style={{ backgroundImage: `url(${image17})` }}>
-      <div className="content">
-        <h1 style = {{padding: "20px"}}>Your Tracking Simplified.</h1>
-        <p>The number one app to keep you updated on what your kids are upto, the last location visited and any other information you might want to access on a target's device.</p>
-        <ul class ="list-coil-hook-black pt-2">
-          {" "}
-
-<li>Review sent, received and deleted text messages.</li>
-
-<li>Access present and past location history.</li>
-
-<li>Check their social media interactivity: read chats, comments and liked posts.</li>
-
-<li>Access all fliles on the phone, screen records, audios and photos.</li>
-
-<li>Access incoming, outgoing, missed and deleted calls.</li>
-
-<li>24/7 customer support.</li>
-
-
-          
-        </ul>
-        <button type="button" className="btn btn-primary mb1 teal" onClick = {() =>{
-navigate("/Signup");}} >Get Started</button>
-      </div>
-      
-    </section>
-
-    <section className="hero2" style={{ backgroundColor: "lightblue" }}>
-    <div className="content2">
-      <Container id = "features">
-        <h1> Start Phone Monitoring in 3 steps</h1>
-        <Cards>
-      
-        {" "}
-
-        <Card 
-        Icon = {Bs1CircleFill}
-        title = {"Account Creation"}
-        disc = {"Enter you Email address and a password you won't forget to create your account."}/>
-        <Card 
-        Icon = {Bs2CircleFill}
-        title = {"Pick your plan"}
-        disc={"We have plans suitable for everyone's need, you will select a plan that best suites your needs."}/>
-
-        <Card 
-        Icon = {Bs3CircleFill}
-        title = {"Start Monitoring"}
-        disc = {"Upon registering and payment you can start tracking your target device's data."}/>
-
-
-      </Cards>
-      </Container>
-      <button type="button" className="btn btn-primary mb1 teal" onClick = {() =>{
-navigate("/Signup");}} >Get Started</button>
+  // data for features
+  const features = [
+    {
+      title: 'Photo Viewer',
+      description: 'Are they sending and receiving controversial photos? redSpy can show you what’s on their camera roll, complete with a time & date stamp to help you understand everything a little better.',
+      icon: '📷',
+    },
+    {
+      title: 'Text Message Monitoring',
+      description: 'Are they constantly texting? Discover who they’re texting and what they’re saying. Every text. Every pic and video. It’s all there.',
+      icon: '💬',
+    },
+    {
+      title: 'GPS Locations Tracker',
+      description: 'They deserve the freedom to explore. But you deserve to remain calm. That’s why redSpy lets you find their location on a map. You can even check their route history, so you’ll know where they’ve been in the past, too.',
+      icon: '📍',
+    },
+    {
+      title: 'Geofencing Alerts',
+      description: 'Worried about where they’re going? redSpy lets you know if they enter an area you don’t approve of. Just set your safe zones on a map and get alerted when they come and go.',
+      icon: '🚧',
+    },
+    {
+      title: 'Screen Recorder',
+      description: 'Now you can visually see exactly what they’re saying on their phone, in pretty much any app. redSpy regularly takes screenshots of their activity and uploads them to your Control Panel. It’s visual proof like you’ve never seen it before.',
+      icon: '🎥',
+    },
+    {
+      title: 'Browser History Monitoring',
+      description: 'The Internet is huge. That’s why redSpy is designed to help guide you to where they’ve been. Just log in to your Control Panel to find out which sites they’ve visited and when they’ve visited them. And it’s just as easy to filter web content.',
+      icon: '🌐',
+    },
+    {
+      title: 'Website Bookmark Monitoring',
+      description: 'Ever wonder what their favorite sites are? redSpy can show you. In one click, it’s easy to find out which sites they’ve got bookmarked in their browser.',
+      icon: '🔖',
+    },
+    {
+      title: 'Instagram Monitoring',
+      description: 'The app that’s great for sharing photos is also great for chatting with strangers. With redSpy, you can find out who they’re connecting with. Now that’s a good reason to smile.',
+      icon: '📸',
+    },
+    {
+      title: 'Keylogger',
+      description: 'Imagine being able to see every keystroke they type on their phone. It’s not magic. It’s redSpy. And with the included Keylogger, it’s easy to know exactly what they’re saying.',
+      icon: '⌨️',
+    },
+    {
+      title: 'Call Monitoring',
+      description: 'Wondering what they’re up to when their phone rings? redSpy can help with a detailed call log, including timestamps, duration, and more.',
+      icon: '📞',
+    },
+    {
+      title: 'iMessage Monitoring',
+      description: 'Do they use an iPhone? You can see the iMessages they’ve sent and received with ease. Everything’s sent right to your Control Panel, so you’ll always be in the know.',
+      icon: '📱',
+    },
+    {
+      title: 'Video Viewer',
+      description: 'People love sending and receiving videos. Now you can take a look at them whenever you please. It’s a great way to make sure they aren’t saving anything controversial on their device, like violent or pornographic content.',
+      icon: '🎬',
+    },
+    {
+      title: 'Snapchat Monitoring',
+      description: 'With photos that disappear, Snapchat is every person dream. And every parent’s nightmare. Find out what pics they’re sending and receiving with redSpy.',
+      icon: '👻',
+    },
+    {
+      title: 'Tinder Monitoring',
+      description: 'Are they using the popular dating app to meet strangers? And are they doing it right under your nose? Find out with redSpy.',
+      icon: '❤️',
+    },
+    {
+      title: 'Contacts Viewer',
+      description: 'You may know all their friends, but do you know who’s on their Contacts list? redSpy can fill you in, helping you paint a clearer picture of who they chat with on a regular basis.',
+      icon: '👥',
+    },
+    {
+      title: 'WhatsApp Monitoring',
+      description: 'The popular cross-platform app makes it easy for them to text and call anyone around the world. And with redSpy, it’s even easier to know what they’re saying. Every message. Every picture. It’s all available to see with redSpy.',
+      icon: '💬',
+    },
+    {
+      title: 'Facebook Messenger Monitoring',
+      description: 'Do you know all their friends on Facebook? And do you know who they’re chatting with regularly? redSpy can show you everything.',
+      icon: '📘',
+    },
+    {
+      title: 'App Viewer',
+      description: 'Wondering what apps they have installed on their phone? Now you can find out without having to physically grab their device. Just log in to your Control Panel and you’ll know everything.',
+      icon: '📲',
+    },
+    {
+      title: 'Calendar Viewer',
+      description: 'Are they planning something without your knowledge? Take a peek into their calendar and find out. redSpy makes it possible, all through your Control Panel.',
+      icon: '📅',
+    },
+    {
+      title: 'Remote Camera',
+      description: 'Want to be there when you can’t? Activate their Android’s camera remotely and watch everything.',
+      icon: '📸',
+    },
+    {
+      title: 'Twitter Connection',
+      description: 'Connect their Twitter account to your redSpy Control Panel and monitor DMs.',
+      icon: '🐦',
+    },
+    {
+      title: 'YouTube Connection',
+      description: 'Concerned about what they’re watching? Check their YouTube watch history and see the truth.',
+      icon: '📺',
+    },
+    {
+      title: 'Gmail Connection',
+      description: 'It’s easy to access their Gmail account. Just connect it to your Control Panel and you’ll see everything.',
+      icon: '✉️',
+    },
+    {
+      title: 'Skype Monitoring',
+      description: 'The popular app is used by people all over the world. Now you can discover what they’re chatting about without standing over their shoulder.',
+      icon: '🖥️',
+    },
+    {
+      title: 'Audio Recording',
+      description: 'Listen in on their real-world conversations. One click is all it takes to activate their Android’s mic remotely.',
+      icon: '🎤',
+    },
+  ];
   
-    </div>
-  </section> 
-
-  <section className="hero1" style={{ backgroundColor: "white" }}>
-    <div className="content1">
-      <Container id = "features">
-        <h1> Solutions We Offer</h1>
-        <Cards>
-      
-        {" "}
-
-        <Card 
-        Icon = {FcAndroidOs}
-        title = {"Android Tracking"}
-        disc = {"Comptible with all android phones, easy install and registration process, totally hidden, protected data and very confidential."}/>
-        <Card 
-        Icon = {BsApple}
-        title = {"Iphone tracking"}
-        disc={"Compatible with all Iphones regardless of the IoS version, easy install, icloud friendly, encrypted data, best packages you can get."}/>
-
-        <Card 
-        Icon = {FcSmartphoneTablet}
-        title = {"Ipad and Tablet Tracking"}
-        disc = {"Compatible with both an Ipad and a tablet, hidden and you can monitor the activities on the device, helps in parental control as you can restrict the sites your child visits."} />
-      </Cards>
-
-      <Card 
-        Icon = {BsFillFileBreakFill }
-        title = {"No Jailbreaking & Rooting"}
-        disc = {"The services we offer are very affordable and they do not require alot of effort like jailbreaking in order to access the devic's activities."} />
-
-      </Container>
-      <button type="button" className="btn btn-primary mb1 teal" onClick = {() =>{
-navigate("/Signup");}} >Get Started</button>
   
+
+  // Custom Arrow components
+  const NextArrow = ({ onClick }) => (
+    <div className="arrow next" onClick={onClick}>
+      →
     </div>
-  </section> 
-
-    <section className="hero1" style={{ backgroundColor: "lightblue" }}>
-      <div className="content1">
-        <Container id = "features">
-          <h1>Monitor activity on all Devices.</h1>
-          <Cards>
-        
-          {" "}
-
-          <Card 
-          Icon = {IoLogoWhatsapp}
-          title = {"WhatsApp Tracking"}
-          disc = {"Monitor all WhatsApp chats and contacts. View and download all Photos, video, documents and voice calls."}/>
-          <Card 
-          Icon = {IoIosText}
-          title = {"Text Messages Tracker"}
-          disc = {"Read all sent, received and deleted messages. View all images, videos and files."}/>
-
-          <Card 
-          Icon = {FaInstagram}
-          title = {"Instagram Spy"}
-          disc = {"Monitor all social media activities."}/>
-
-          <Card 
-          Icon = { FaLocationDot}
-          title = {"GPS Location Tracker"}
-          disc = {"Track the current loaction of the device and also access the devices location history."}/>
-
-        <Card 
-          Icon = {IoMdPhotos}
-          title = {"Photos & Videos Viewer"}
-          disc = {"View all received, saved and shared media files."}/>
-
-        <Card 
-          Icon = {IoCallSharp}
-          title = {"Phone Calls Tracker"}
-          disc = {"Access all incoming and outgoing calls with the contact info of the caller, call duration and timestamp."}/>
-
-
-
-        </Cards>
-        </Container>
-        <button type="button" className="btn btn-primary mb1 teal" onClick = {() =>{
-navigate("/Signup");}} >Get Started</button>
-    
-      </div>
-
-      
-    </section>
-
-    <section className="hero6" style={{ backgroundColor: "white" }}>
-      <div className="content6">
-        <Container id = "features">
-          <h1> Why Choose Us?</h1>
-          <Cards>
-        
-          {" "}
-
-          <Card 
-          Icon = {MdOutlineStopScreenShare}
-          title =
-          {"Undetectable Tracking"}
-          disc = {"Monitor data from any device without the owner being aware. Our software operates in a hidden mode, leaving no visible signs of its presence."}/>
-          <Card 
-          Icon = {BsPhoneFlip }
-          title = {"Compatible with every device"}
-          disc={"Our software works on every smartphone regardless of the operating  system."}/>
-
-          <Card 
-          Icon = {FaFirefox}
-          title = {"Get updated Information"}
-          disc = {"Our sofware offers real time and updated information on the device you are tracking. The updates take place every 2 to 3 minutes."}/>
-
-          <Card 
-          Icon = { SiLetsencrypt }
-          title = {"Highly Encrypted"}
-          disc = {"Our software employs advanced system encryption when transfering data and only you can access it."}/>
-
-        <Card 
-          Icon = {RiCustomerService2Line}
-          title = {"Support at All Times"}
-          disc = {"We have a 24/7 customer support agency, where your needs are met and problms resolved in the shortest time possible."}/>
-
-
-
-        </Cards>
-        </Container>
-        <button type="button" className="btn btn-primary mb1 teal" onClick = {() =>{
-navigate("/Signup");}} >Get Started</button>
-    
-      </div>
-
-      
-    </section>
-    <Footer />  
-</>
   );
-}
+
+  const PrevArrow = ({ onClick }) => (
+    <div className="arrow prev" onClick={onClick}>
+      ←
+    </div>
+  );
+
+  // Slider settings with custom arrows
+  const featureSliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    afterChange: (current) => setCurrentSlide(current),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  };
+
+  return (
+    <div>
+      {/* Hero Section */}
+      <section className="hero-section">
+                <div className="hero-content">
+                    <h1 style={{ color: 'white' }}>Welcome to RedSpy</h1>
+                    <p>Your all-in-one monitoring solution.<br />
+                        Know more. Worry less. That’s the power of RedSpy, <br />
+                        the app that lets you find out what they’re up to on their phone and online. <br />
+                        And they won’t even know you’re using it.
+                    </p>
+                    <button className="hero-button" onClick={() => navigate("/Signup")}>Get Started</button>
+                </div>
+            </section>
+
+      {/* Add the "Why Choose Our App" slider here */}
+      <WhyChooseSlider />
+
+      <section class="truth-section">
+  <h2 style={{ color: 'white', fontSize: '2rem' }}>Stop relying on a hunch. Find out the truth.</h2>
+  <div class="truth-cards-container">
+    <div class="truth-card">
+      <span class="truth-emoji">⌨️</span>
+      <p style={{ color: 'black', fontSize: '1.2rem' }}>Monitor every keystroke & every tap</p>
+    </div>
+    <div class="truth-card">
+      <span class="truth-emoji">📍</span>
+      <p style={{ color: 'black', fontSize: '1.2rem' }}>See where they’ve been and where they’re going</p>
+    </div>
+    <div class="truth-card">
+      <span class="truth-emoji">📞</span>
+      <p style={{ color: 'black', fontSize: '1.2rem' }}>Find out who they’ve called</p>
+    </div>
+    <div class="truth-card">
+      <span class="truth-emoji">🔍</span>
+      <p style={{ color: 'black', fontSize: '1.2rem' }}>See what they’ve searched for</p>
+    </div>
+    <div class="truth-card">
+      <span class="truth-emoji">💬</span>
+      <p style={{ color: 'black', fontSize: '1.2rem' }}>Read their social media chats</p>
+    </div>
+    <div class="truth-card">
+      <span class="truth-emoji">✉️</span>
+      <p style={{ color: 'black', fontSize: '1.2rem' }}>Review their texts (including deleted messages)</p>
+    </div>
+    <div class="truth-card">
+      <span class="truth-emoji">📸</span>
+      <p style={{ color: 'black', fontSize: '1.2rem' }}>See the pics they share and receive</p>
+    </div>
+    <div class="truth-card">
+      <span class="truth-emoji">🕵️</span>
+      <p style={{ color: 'black', fontSize: '1.2rem' }}>Do it all without being detected</p>
+    </div>
+    <button className="hero-button" onClick={() => navigate("/Signup")}>Get Started</button>
+  </div>
+</section>
+
+      {/* Features Section with Slider */}
+      <section className="features-section" style={sectionStyle}>
+        <div className="container">
+          <h2 style={{ color: 'white', fontSize: '2rem' }}>Dozens of Features. One App</h2>
+          <p style = {{fontSize: '1.4rem'}}>redSpy is more than an app. It's the key to the internet, and it's yours to help you unlock their digital world, find out the truth, and rest a little easier.</p>
+          <div className="slider-wrapper" style={{ position: 'relative' }}>
+            <Slider {...featureSliderSettings}>
+              {features.map((feature, index) => (
+                <div key={index} className="feature-card" style={cardStyle}>
+                  <div className="feature-icon" style={featureIconStyle}>
+                    {feature.icon}
+                  </div>
+                  <h3 style={{ color: 'lightblue', fontSize: '1.4rem' }}>{feature.title}</h3>
+                  <p style = {{color: 'black', fontSize: '1.2rem'}}>{feature.description}</p>
+                </div>
+              ))}
+            </Slider>
+
+            {/* Slide Number Indicator */}
+            <div className="slide-number">
+              {currentSlide + 1} / {features.length}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Steps to install Section */}
+
+      <StepsToInstall/>
+
+      {/* Suited Section */}
+      <section className="about-section" style={{ ...sectionStyle, backgroundColor: '#f9f9f9' }}>
+      <div className="suited-section">
+      <h2 style={{ color: 'white', fontSize: '2rem' }}>redSpy Is Suited for Any Device</h2>
+      <div className="devices-container">
+        {/* Android Card */}
+        <div className="device-card">
+          <span role="img" aria-label="Android" className="device-icon">🤖</span>
+          <h3 style={{ color: 'black' }}>Android</h3>
+          <div className="features">
+            <p style={{ color: 'black', fontSize: '1.2rem' }}><span role="img" aria-label="phone">📱</span> Physical access required</p>
+            <p style={{ color: 'black', fontSize: '1.2rem' }}><span role="img" aria-label="wrench">🔧</span> Installs directly on the phone</p>
+            <p style={{ color: 'black', fontSize: '1.2rem' }}><span role="img" aria-label="chat">💬</span> Social media monitoring without rooting</p>
+            <p style={{ color: 'black', fontSize: '1.2rem' }}><span role="img" aria-label="toolbox">🛠</span> Works in the background</p>
+          </div>
+        </div>
+
+        {/* iPhone Card */}
+        <div className="device-card">
+          <span role="img" aria-label="iPhone" className="device-icon">📱</span>
+          <h3 style={{ color: 'black' }}>iPhone</h3>
+          <div className="features">
+            <p><span role="img" aria-label="key">🔑</span> Physical access or iCloud credentials required</p>
+            <p><span role="img" aria-label="rocket">🚀</span> More mSpy features for jailbroken devices</p>
+            <p><span role="img" aria-label="shopping">🛍</span> Lite version available on the App Store</p>
+            <p><span role="img" aria-label="toolbox">🛠</span> Works in the background</p>
+          </div>
+        </div>
+      </div>
+      <button className="hero-button" onClick={() => navigate("/Signup")}>Get Started</button>
+    </div>
+      </section>
+
+      {/* reviews section */}
+      <Reviews />
+
+      {/* faq section */}
+      <FAQ />
+
+      {/*Footer section */}
+      <Footer />
+      
+    </div>
+  );
+};
+
+// Inline styles for quick styling
+const heroContentStyle = {
+  textAlign: 'center',
+};
+
+const ctaButtonStyle = {
+  backgroundColor: '#0000ff',
+  border: 'none',
+  padding: '10px 20px',
+  color: '#fff',
+  fontSize: '18px',
+  cursor: 'pointer',
+  borderRadius: '5px'
+};
+
+const sectionStyle = {
+  padding: '50px 0',
+  textAlign: 'center',
+  fontFamily: 'sans-serif', 
+};
+
+const cardStyle = {
+  backgroundColor: '#fff',
+  padding: '20px',
+  borderRadius: '10px',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  margin: '20px',
+  textAlign: 'center'
+};
+
+const featureIconStyle = {
+  fontSize: '40px',
+  marginBottom: '10px',
+};
 
 export default Home;
-
-const Container = styled.div`
-width: 80%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 3rem 0;
-  @media (max-width: 840px) {
-    width: 90%;
-  }
-
-  h1 {
-    padding-top: 1rem;
-    font-weight: bolder;
-    color: red;
-    font-size: 3rem;
-  }
-    h2 {
-    padding-top: 1rem;
-    font-weight: 700;
-    color: purple;
-  }`;
-
-
-const Cards = styled.div`
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-margin-top: 4rem;
-gap: 1rem; 
-`;

@@ -22,7 +22,11 @@ background: linear-gradient(159deg, black(45,45,58) 0%, black(43,43,53) 100%);
 padding: 1rem;
 text-align: center;
 span{
-font-size: 4rem;}
+font-size: 4rem;
+@media and screen (max-width: 1000px), (max-height: 1000px) {
+    width: 100%;
+    flex-direction: column;
+  }}
 
 h2{
 font-size: 1.2rem;
@@ -32,4 +36,4 @@ color: black;
 
 p{
 font-size: 0.rem;}
-`
+`;

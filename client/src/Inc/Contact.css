@@ -1,0 +1,124 @@
+/* Contacts.css */
+
+/* General styling for the contact rows */
+.contacts-container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .contact-name-row {
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-name-row:hover {
+    background-color: #ececec;
+  }
+  
+  .contact-details-row {
+    background-color: #f1f1f1;
+  }
+  
+  .contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .contacts-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .contacts-table td svg {
+    margin-right: 5px;
+  }
+  
+  /* Pagination */
+  .pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .pagination-controls button {
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Media Queries for responsive design */
+  
+  /* For small devices (phones, max-width: 600px) */
+  @media only screen and (max-width: 600px) {
+    .contacts-container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .contacts-table td {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .pagination-controls {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pagination-controls button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  }
+  
+  /* For medium devices (tablets, max-width: 768px) */
+  @media only screen and (max-width: 768px) {
+    .contacts-container {
+      width: 90%;
+    }
+  
+    .contacts-table td {
+      font-size: 16px;
+    }
+  
+    .search-bar input {
+      width: 80%;
+    }
+  }
+  
+  /* For large devices (desktops, min-width: 1024px) */
+  @media only screen and (min-width: 1024px) {
+    .contacts-container {
+      width: 70%;
+    }
+  
+    .contacts-table td {
+      font-size: 18px;
+    }
+  
+    .pagination-controls button {
+      width: auto;
+    }
+  
+    .search-bar input {
+      width: 50%;
+    }
+  }
+  

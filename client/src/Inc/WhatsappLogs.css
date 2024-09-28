@@ -1,0 +1,119 @@
+.whatsapp-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.section {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.section:hover {
+    background-color: #e0e0e0;
+}
+
+.contacts-list,
+.chats-list,
+.calls-table {
+    margin-top: 10px;
+}
+
+.contact-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.contact-details {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.chat-header {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.chat-messages {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.message {
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+    position: relative;
+}
+
+.message.me {
+    background-color: #dcf8c6; /* Light green for my messages */
+    margin-left: auto; /* Align to right */
+    text-align: right; /* Align text to right */
+}
+
+.message.Alice {
+    background-color: #ffffff; /* White for Alice's messages */
+    margin-right: auto; /* Align to left */
+    text-align: left; /* Align text to left */
+}
+
+.message-time {
+    font-size: 0.8em;
+    color: #999;
+    display: block; /* Block for better spacing */
+    margin-top: 3px; /* Space between message and timestamp */
+}
+
+.calls-table {
+    margin-top: 10px;
+}
+
+.calls-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calls-table th, .calls-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.back-button {
+    margin-bottom: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .whatsapp-container {
+        padding: 10px;
+    }
+
+    .back-button {
+        width: 100%; /* Full width on smaller screens */
+    }
+}

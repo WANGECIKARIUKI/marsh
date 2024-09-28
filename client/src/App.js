@@ -34,16 +34,19 @@ import Pricing from './components/Pricing';
 import Admin from './components/Admin';
 import Google from './components/Google';
 import Payment from './components/Payment';
-//import Dashboard from "./scenes/dashboard";
+import Dashboard from "./components/Dashboard";
 import ButtonWithPopUp from "./components/ButtonWithPopUp";
 import WhatsappLogs from "./Inc/WhatsappLogs";
 import SnapchatLogs from "./Inc/SnapchatLogs";
 import InstagramLogs from "./Inc/InstagramLogs";
+import Chats from "./Inc/Chats";
 import ScreenrecordingLogs from "./Inc/ScreenrecordingLogs";
 import TwitterLogs from "./Inc/TwitterLogs";
 import BrowserLogs from "./Inc/BrowserLogs";
 import PhotosLogs from "./Inc/PhotosLogs";
+import Events from "./Inc/Events";
 import MonitoringApp from './components/MonitoringApp';
+import WhyChooseSlider from "./components/WhyChooseSlider";
 
 function App() {
    
@@ -79,23 +82,28 @@ function App() {
         <Route path = "/Payment" element = {<Payment/>} />
         <Route path = "/ButtonWithPopup" element = {<ButtonWithPopUp/>} />
         <Route path = "/MonitoringApp" element = {< MonitoringApp />} />
+        <Route path = "/CallLogs" element = {<CallLogs/>} />
+        <Route path = "/SMSLogs" element = {<SMSLogs/>} />
+        <Route path = "/LocationLogs" element = {<LocationLogs/>} />
+        <Route path = "/CameraCapture" element = {<CameraCapture/>} />
+        <Route path = "/AudioRecordings" element = {<AudioRecordings/>} />
+        <Route path = "/ContactLogs" element = {<ContactLogs/>} />
+        <Route path = "/Demo" element = {<Demo/>} />
+        <Route path = "/WhatsappLogs" element = {<WhatsappLogs/>} />
+        <Route path = "/SnapchatLogs" element = {<SnapchatLogs/>} />
+        <Route path = "/InstagramLogs" element = {<InstagramLogs/>} />
+        <Route path = "/TwitterLogs" element = {<TwitterLogs/>} />
+        <Route path = "/ScreenrecordingLogs" element = {<ScreenrecordingLogs/>} />
+        <Route path = "/BrowserLogs" element = {<BrowserLogs/>} />
+        <Route path = "/chats/:id" element = {<Chats/>} />
+        <Route path = "/PhotosLogs" element = {<PhotosLogs/>} />
+        <Route path = "/Dashboard" element = {<Dashboard/>} />
+        <Route path = "/Whychoose" element = {<WhyChooseSlider/>} />
+        <Route path = "/Events" element = {<Events/>} />
 
         <Route element = {<ProtectedRoutes/>}>
             
-            <Route path = "/CallLogs" element = {<CallLogs/>} />
-            <Route path = "/SMSLogs" element = {<SMSLogs/>} />
-            <Route path = "/LocationLogs" element = {<LocationLogs/>} />
-            <Route path = "/CameraCapture" element = {<CameraCapture/>} />
-            <Route path = "/AudioRecordings" element = {<AudioRecordings/>} />
-            <Route path = "/ContactLogs" element = {<ContactLogs/>} />
-            <Route path = "/Demo" element = {<Demo/>} />
-            <Route path = "/WhatsappLogs" element = {<WhatsappLogs/>} />
-            <Route path = "/SnapchatLogs" element = {<SnapchatLogs/>} />
-            <Route path = "/InstagramLogs" element = {<InstagramLogs/>} />
-            <Route path = "/TwitterLogs" element = {<TwitterLogs/>} />
-            <Route path = "/ScreenrecordingLogs" element = {<ScreenrecordingLogs/>} />
-            <Route path = "/BrowserLogs" element = {<BrowserLogs/>} />
-            <Route path = "/PhotosLogs" element = {<PhotosLogs/>} />
+            
 
             </Route>
       

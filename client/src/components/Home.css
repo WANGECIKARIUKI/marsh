@@ -1,371 +1,830 @@
+/* Home.css */
+/* Hero Section */
+p {
+  font-size: 24px; /* Increase the size as per your requirement */
+  line-height: 1.6; /* Adjust line-height for better readability */
+  color: white; /* Ensure text color remains readable */
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 20px; /* Set a slightly smaller font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 18px; /* Further reduce size for very small screens */
+  }
+}
+
+.hero-section {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://energysaversindia.com/wp-content/uploads/2023/08/computer-technology-connected-8037837-1024x766.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 120px 0; /* Increased padding for more vertical space */
+  min-height: 600px; /* Set a minimum height to increase the section height */
+  color: white; /* Change text color to white for better contrast */
+  text-align: center;
+}
+
+
+.hero-content h1 {
+  font-size: 3rem; /* Adjust font size */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+.hero-content p {
+  font-size: 1.5rem; /* Adjust paragraph font size */
+  margin-bottom: 30px; /* Space below paragraph */
+  color: white;
+}
+
+.hero-button {
+  background-color: #ff0000; /* Change button color */
+  color: white;
+  padding: 10px 20px; /* Adjust padding for a smaller button */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem; /* Button font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 150px; /* Set a fixed width for the button */
+  max-width: 100%; /* Ensure it doesn’t overflow its container */
+}
+
+.hero-button:hover {
+  background-color: #cc0000; /* Darken button color on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-button {
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+      font-size: 0.9rem; /* Smaller font size for button */
+      width: 120px; /* Reduced width for tablet devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-button {
+      padding: 6px 12px; /* Further adjust padding for mobile */
+      font-size: 0.9rem; /* Maintain smaller font size for mobile */
+      width: 100px; /* Further reduced width for mobile devices */
+  }
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-section {
+      padding: 60px 0; /* Reduce padding for smaller screens */
+  }
+
+  .hero-content h1 {
+      font-size: 2.5rem; /* Smaller heading font size */
+  }
+
+  .hero-content p {
+      font-size: 1.5rem; /* Smaller paragraph font size */
+  }
+
+  .hero-button {
+      padding: 12px 25px; /* Adjust button padding */
+      font-size: 1.1rem; /* Smaller button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+      padding: 40px 0; /* Further reduce padding for mobile */
+  }
+
+  .hero-content h1 {
+      font-size: 2rem; /* Even smaller heading font size */
+  }
+
+  .hero-content p {
+      font-size: 1.3rem; /* Smaller paragraph font size */
+      margin-bottom: 20px; /* Adjust space below paragraph */
+  }
+
+  .hero-button {
+      padding: 10px 20px; /* Further adjust button padding */
+      font-size: 1rem; /* Smaller button font size */
+  }
+}
+
+
+/* Image Container */
+.image-container {
+  flex: 1; /* Equal space for images */
+  display: flex; /* Center the image */
+  justify-content: center; /* Center the image horizontally */
+}
+
+.left-image {
+  max-width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.right-image{
+  max-width: 100%; /* Make images responsive */
+  height: 70%; /* Maintain aspect ratio */
+
+}
+
+/* Text Container */
+.text-container {
+  flex: 1; /* Equal space for text */
+  text-align: center; /* Center text */
+}
+
+.text-container h1 {
+  font-size: 3rem; /* Adjust the font size as needed */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.text-container p {
+  font-size: 1.3rem; /* Adjust paragraph size */
+  margin-bottom: 30px; /* Space below the paragraph */
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  justify-content: center; /* Center buttons */
+}
+
+.primary-btn, .secondary-btn {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: red; /* Primary color */
+  color: white;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: red; /* Primary color */
+  border: 2px solid #007bff; /* Border color matches primary color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Button Hover Effects */
+.primary-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.secondary-btn:hover {
+  background-color: #007bff; /* Primary color on hover */
+  color: white; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Stack images and text on smaller screens */
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .text-container h1 {
+    font-size: 2.5rem; /* Smaller font on mobile */
+  }
+
+  .text-container p {
+    font-size: 1rem; /* Smaller paragraph size on mobile */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons on smaller screens */
+    align-items: center; /* Center buttons */
+  }
+}
+
+
+
+/* Arrows */
+/* Arrow Styles */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.arrow.next {
+  right: 10px;
+}
+
+.arrow.prev {
+  left: 10px;
+}
+
+/* Slide Number */
+.slide-number {
+  position: absolute;
+  bottom: -30px;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 16px;
+  color: #000;
+}
+
+/* Suited Section */
+.suited-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: black;
+}
+
+.suited-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* Devices Container */
+.devices-container {
+  display: flex;
+  flex-direction: row; /* Row layout by default */
+  justify-content: space-around; /* Space between cards */
+  align-items: flex-start; /* Align cards to the top */
+  gap: 10px; /* Reduced space between cards */
+}
+
+/* Device Card Styles */
+.device-card {
+  background-color:white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.device-card:hover {
+  transform: translateY(-5px);
+}
+
+.device-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.device-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: black;
+}
+
+/* Features Styling */
+.features p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between emoji and text */
+  text-align: left;
+  color: black;
+}
+
+.features p span {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .devices-container {
+    flex-direction: column; /* Switch to column for mobile */
+    align-items: center; /* Center the cards */
+  }
+
+  .device-card {
+    width: 100%; /* Full width for mobile */
+    max-width: 350px; /* Optional: limit the max width */
+  }
+}
+
+/* Device Cards Section */
+.device-cards-section {
+  display: flex;
+  flex-direction: column; /* Stack cards in a column */
+  align-items: center; /* Center cards */
+  padding: 40px 20px; /* Padding for the section */
+}
+
+/* Card Styles */
+.card {
+  background-color: rgb(235, 220, 220);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Width of each card */
+  margin: 10px 0; /* Space between cards */
+  text-align: center; /* Center text */
+  transition: transform 0.3s ease;
+  position: relative; /* For positioning feature cards */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.card h3 {
+  font-size: 1.8rem; /* Title font size */
+  margin-bottom: 15px; /* Space below title */
+  color: lightblue;
+}
+
+/* Features Styles */
+.features {
+  display: flex;
+  flex-direction: column; /* Stack feature cards vertically */
+  align-items: flex-start; /* Align feature cards to the left */
+}
+
+/* Feature Card Styles */
+.feature-card {
+  background-color: rgb(235, 220, 220); /* Light background for feature cards */
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 10px; /* Padding for feature cards */
+  margin: 5px 0; /* Space between feature cards */
+  width: 100%; /* Make feature cards full width */
+  text-align: left; /* Align text to the left */
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .device-cards-section {
+    padding: 20px; /* Less padding on smaller screens */
+  }
+
+  .card {
+    width: 90%; /* Full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card h3 {
+    font-size: 1.5rem; /* Smaller title font size on very small screens */
+  }
+
+  .feature-card {
+    font-size: 0.9rem; /* Smaller font size for feature cards */
+  }
+}
+
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: georgia, serif;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+
+.hero {
+  display: flex;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-color: lightblue transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  color: lightblue;
+  margin-inline: auto;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+}
+
+.content h1 {
+  font-size: 40px;
+  font-weight: bolder;
+  color: red;
+}
+
+.content p,
+.content li {
+  font-size: 22px;
+  margin: 15px 0;
+  max-width: 550px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.content a {
+  color: inherit;
+  text-decoration: none;
+  background-color: purple;
+  padding: 12px 24px;
+  font-size: 22px;
+  border-radius: 10px;
+}
+
+:root {
+  --primary: lightblue;
+  background: white;
+}
+
+.btn-up {
+  padding: 4px 12px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-up:hover {
+  transition: all 0.3s ease-out;
+  background: red;
+  color: black;
+  padding: 6px 16px;
+  border-radius: 10px;
+  border: 2px solid red;
+}
+
+.btn-up {
+  background-color: white;
+  color: black;
+}
+
+/* Common Hero and Content Styles for all sections */
+.hero1, .hero2, .hero4, .hero5, .hero6, .hero7, .hero8, .hero10, .hero12, .hero13 {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-color: lightblue transparent;
+}
+
+.content1, .content2, .content4, .content5, .content6, .content7, .content8, .content10, .content12, .content13 {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  color: black;
+  margin-inline: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Queries */
+@media (max-width: 968px) {
   .hero {
-    display: flex;
-    height: 85vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: lightblue;
-    margin-inline: auto;
-    text-align: left;
-    justify-content: left;
-    align-items: left;
+      height: 70vh; /* Reduce height for smaller screens */
   }
   
   .content h1 {
-    font-size: 40px;
-    font-weight: bolder;
-    color: red;
-  }
-  
-  .content p {
-    font-size: 22px;
-    margin: 15px 0;
-    max-width: 550px;
-    letter-spacing: 2px;
-    text-align: left;
-    justify-content: left;
-    align-items: left;
-  }
-  
-  .content a {
-    color: inherit;
-    text-decoration: none;
-    background-color: purple;
-    padding: 12px 24px;
-    font-size: 22px;
-    border-radius: 10px;
+      font-size: 28px; /* Smaller heading */
   }
 
-  :root {
-    --primary: lightblue;
-    background: white
-  }
-  
-  .btn-up {
-    padding: 4px 12px;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .btn-up:hover {
-    transition: all 0.3s ease-out;
-    background: red;
-    color: black;
-    padding: 6px 16px;
-    border-radius: 10px;
-    border: 2px solid red;
-    
-  }
-  .btn-up{
-    background-color:white;
-    color: black;
-  }
-
+  .content p, 
   .content li {
-    font-size: 22px;
-    margin: 15px 0;
-    max-width: 550px;
-    letter-spacing: 2px;
-    text-align: left;
-    justify-content: left;
-    align-items: left;
-    font-weight: georgia, serif;
-  }
-  .hero1 {
-    display: flex;
-    height: 90vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
-  }
-  
-  .content1 {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
-    text-align: left;
-    justify-content: left;
-    align-items: left;
+      font-size: 18px; /* Smaller paragraph and list items */
+      max-width: 90%; /* Wider for smaller screens */
   }
 
   .btn-primary {
-    color: var(--button-color);
-    background-color: var(--button-background-color);
-    border-radius: var(--border-radius);
-    padding-bottom: 25px;
-    width: 10%;
-    display: flex;
-    justify-items: left;
-    align-items: left;
-    grid-row-gap: 30px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: 600;
-    border: none;
-    border-radius: 15px;
-    padding: 10px 25px;
-    background-size: 150% auto;
-    cursor: pointer;
-    float: right;
-    margin-left: 1370px;
-  }
-  
-  .btn-primary:hover {
-    box-shadow: inset 0 0 0 20rem var(--darken-1);
-  }
-  
-  .btn-primary:active {
-    box-shadow: inset 0 0 0 20rem var(--darken-2),
-      inset 0 3px 4px 0 var(--darken-3),
-      0 0 1px var(--darken-2);
-  }
-  
-  /*.btn-primary:disabled,
-  .btn-primary.is-disabled {
-    opacity: .5;
-  }*/
-  .hero2 {
-    display: flex;
-    height: 60vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
-  }
-  
-  .content2 {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
-    text-align: left;
-    justify-content: left;
-    align-items: left;
+      width: 100%; /* Full width button */
+      padding: 10px; /* Adjust padding */
+      font-size: 18px; /* Smaller font size */
+      margin: 10px 0; /* Space around button */
   }
 
-  hero4 {
-    display: flex;
-    height: 85vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
+  /* Adjust content alignment */
+  .content {
+      align-items: center; /* Center content */
+      text-align: center; /* Center text */
   }
-  
-  .content4{
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
-    text-align: left;
-    justify-content: left;
-    align-items: left;
+}
+
+@media (max-width: 480px) {
+  .hero {
+      height: 60vh; /* Further reduce height */
   }
 
-  .hero5 {
-    display: flex;
-    height: 70vh;
-    padding: 20px;
-    width: 130vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
-  }
-  
-  .content1 {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
-    text-align: left;
-    justify-content: left;
-    align-items: left;
-  }
-  .hero4 {
-    display: flex;
-    height : 65vh;
-    padding: 20px;
-    width: 130vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
-  }
-  
-  .content4 {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
-    text-align: left;
-    justify-content: left;
-    align-items: left;
+  .content h1 {
+      font-size: 24px; /* Even smaller heading */
   }
 
-  .hero6 {
-    display: flex;
-    height: 97vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
-  }
-  
-  .content6 {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
-    text-align: left;
-    justify-content: left;
-    align-items: left;
+  .content p, 
+  .content li {
+      font-size: 16px; /* Smaller font for paragraphs and lists */
   }
 
-
-  .hero8 {
-    display: flex;
-    height: 80vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
+  .btn-primary {
+      font-size: 16px; /* Smaller button font size */
   }
-  
-  .content8 {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
+
+  /* Make other sections responsive */
+  .hero1, .hero2, .hero4, .hero5, .hero6, .hero7, .hero8, .hero10, .hero12, .hero13 {
+      height: auto; /* Allow height to adjust automatically */
+      padding: 20px; /* Add some padding */
+  }
+
+  .content1, .content2, .content4, .content5, .content6, .content7, .content8, .content10, .content12, .content13 {
+      max-width: 100%; /* Full width for content */
+      padding: 0 10px; /* Padding for smaller screens */
+  }
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+  .steps-container {
+    justify-content: flex-start; /* Start the steps from the left */
+    gap: 10px; /* Reduce gap between steps */
+    padding: 0 10px; /* Add padding to the container */
+    overflow-x: scroll; /* Horizontal scrolling for smaller screens */
+  }
+}
+
+/* Features Section */
+.features-section {
+  padding: 50px 0;
+  background-color: black;
+  text-align: center;
+}
+
+.features-card-section h1{
+  font-size:1.2rem;
+
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Limit the width of the card */
+  margin: 0 auto; /* Center the card */
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column; /* Stack items in a column */
+  gap: 15px; /* Space between feature items */
+  align-items: flex-start; /* Align items to the start (left-align) */
+}
+
+.feature-item {
+  display: flex;
+  align-items: center; /* Center the emoji and icon vertically */
+  font-size: 1.2rem; /* Set font size for text */
+  gap: 10px; /* Space between the emoji and the text */
+}
+
+.feature-icon {
+  font-size: 30px; /* Icon size */
+  align-items: center;
+}
+
+
+.feature-item h3 {
+  margin: 0; /* Remove default margin */
+  color: black;
+  font-size: 1.5rem;
+}
+
+.feature-item p {
+  font-size: 1.3rem;
+  color: black;
+  margin-left: 35px; /* To align description under the title */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .features-section h2 {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+
+  .features-container {
+    gap: 10px; /* Reduce gap between items */
+  }
+
+  .feature-item {
+    font-size: 1rem; /* Reduce text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-icon {
+    font-size: 24px; /* Smaller icon size */
+  }
+
+  .feature-item h3 {
+    font-size: 1rem; /* Smaller heading size */
+  }
+}
+
+/* Global font family and size */
+body {
+  font-family: 'Roboto', sans-serif; /* Change 'Roboto' to any desired font family */
+  font-size: 16px; /* Base font size for the entire page */
+  color: white; /* Adjust the text color if needed */
+}
+
+/* Adjust specific element sizes globally */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif; /* A different font for headings if needed */
+}
+
+h1 {
+  font-size: 36px; /* Adjust main heading size */
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p, a, li {
+  font-size: 16px; /* Default font size for paragraphs and links */
+}
+
+/* You can use media queries to change font sizes on smaller screens */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px; /* Reduce the font size for smaller devices */
+  }
+
+  h1 {
+      font-size: 28px; /* Reduce heading sizes */
+  }
+
+  h2 {
+      font-size: 24px;
+  }
+
+  h3 {
+      font-size: 20px;
+  }
+
+  p, a, li {
+      font-size: 14px; /* Adjust text size on smaller devices */
+  }
+}
+
+
+/* General section styling (applies to all sections) */
+section {
+  padding: 60px 20px; /* Add some padding inside sections */
+  margin: 0;
+  width: 100%;
+  color: white; /* Default text color */
+  font-size: large;
+  font-family: sans-serif;
+}
+
+/* Background color for the Hero Section */
+.hero-section {
+  background-color: black;
+  font-size: large;
+  font-family: sans-serif;
+}
+
+/* Background color for the Features Section */
+.features-section {
+  background-color: black; /* Light grey background */
+  font-size: large;
+  font-family: sans-serif;
+}
+
+/* Background color for the Why Choose Section */
+.why-choose-section {
+  background-color: black; /* Slightly darker blue for contrast */
+  font-size: large;
+  font-family: sans-serif;
+}
+
+/* Background color for the Testimonials Section */
+.testimonials-section {
+  background-color: black; /* Light yellow background */
+}
+
+/* Background color for the Get Started Section */
+.get-started-section {
+  background-color: black;
+  font-size: large;
+  font-family: sans-serif;
+}
+
+/* Additional styles for each section */
+.features-section h2,
+.why-choose-section h2,
+.testimonials-section h2,
+.get-started-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white; /* Ensure the heading color is dark for readability */
+}
+
+p {
+  color: white; /* Standard color for paragraphs */
+}
+
+/* Button styling for all sections */
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 10px;
     text-align: center;
-    justify-content: center;
-    align-items: center;
   }
-  .hero7 {
-    display: flex;
-    height: 80vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
-  }
-  
-  .content7 {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
+}
 
-  .hero10 {
-    display: flex;
-    height: 99vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
-  }
-  
-  .content10 {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
+/* Truth Section */
+.truth-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: black;
+}
 
-  .hero12 {
-    display: flex;
-    height: 30vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
+.truth-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* Cards Container */
+.truth-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Gap between cards */
+}
+
+/* Card Styles */
+.truth-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px; /* Width of each card */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.truth-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Emoji styling */
+.truth-emoji {
+  font-size: 2rem; /* Larger emoji size */
+  margin-bottom: 10px; /* Space between emoji and text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .truth-card {
+    width: 90%; /* Full width on smaller screens */
+    max-width: 350px; /* Maximum width */
   }
-  
-  .content12 {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero13 {
-    display: flex;
-    height: 50vh;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-color: lightblue transparent;
-  }
-  
-  .content13 {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    width: 100%;
-    color: black;
-    margin-inline: auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
+}

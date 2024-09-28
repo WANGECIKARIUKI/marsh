@@ -1,99 +1,104 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    
+/* Login.css */
+.main-container-login {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #f7f7f7; /* Light background color */
+    padding: 10px; /* Padding around the container */
 }
 
-.main-container-signup
-{
-    background: white;
-    padding: 40px 20px;
-    margin: 0px auto;
-    width: 500px;
-    margin-top: 150px;
-    border-top: 30px solid white;
-    text-align: center;
-    justify-content: center;
-    border-radius: 20px;
-    border: 2px solid grey;
+.login-form {
+    background-color: #fff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the form */
+    width: 100%; /* Full width on small screens */
+    max-width: 400px; /* Maximum width for the form */
 }
 
-.main-container-signup .header
-{
-    width: 100%;
+.header {
+    text-align: center; /* Center header text */
+    margin-bottom: 15px; /* Space below the header */
+    padding-top: 0; /* Ensure no extra padding above */
 }
 
-.main-container-signup .header h1
-{
-    text-align: center;
-    color: black;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
+h1 {
+    font-size: 2rem; /* Header font size */
+    color: #333; /* Header text color */
+    margin: 0; /* Remove default margin */
 }
 
-.main-container-signup .box
-{
-    width: 100%;
-    margin-top: 10px;
+.box {
+    margin-bottom: 15px; /* Space between input fields */
+    position: relative; /* Position for the icon */
 }
 
-.main-container-signup .box input{
-    width: 80%;
-    padding: 10px 30px;
-    margin-left: 30px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    border: 1px solid black;
+input {
+    width: 100%; /* Full width of the parent box */
+    padding: 10px; /* Padding inside input */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for input text */
 }
 
-.main-container-signup p
-{
-    margin-top: 15px;
-    font-size: 14px;
-    color: black;
-    margin-left: 45%;
-    font-weight: 600;
-    text-align: left;
+.password-box {
+    display: flex; /* Flexbox for password input */
+    align-items: center; /* Center items vertically */
 }
 
-.main-container-signup button
-{
-    margin-top: 10px;
-    margin-left: 35%;
-    padding: 10px 30px;
-    border: none;
-    outline: none;
-    background: lightblue;
-    border-radius: 5px;
-    color: coral;
-    font-weight: 600;
-    cursor: pointer;
-    display: block;
-    justify-content: center;
-    text-align: center;
+.icons-span {
+    position: absolute; /* Absolute positioning for the icon */
+    right: 10px; /* Positioning from the right */
+    cursor: pointer; /* Pointer cursor for icon */
 }
 
-.icons-span{
-    position: absolute;
-    height: 100%;
-    align-items: center;
-    left: 1050px;
-    display: absolute;
-    color: coral
+button {
+    background-color: red; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Button font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+    width: 100%; /* Full width button */
 }
 
-.main-container-signup span{
-    border: none;
-    text-align: center;
-    font-size: 1rem;
-    color: black;
-    font-weight: 300;
+button:hover {
+    background-color: #d40000; /* Darker shade on hover */
 }
 
+.error-message {
+    color: red; /* Error message color */
+    margin-bottom: 10px; /* Space below error message */
+}
 
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem; /* Adjust h1 size for smaller screens */
+    }
+
+    .login-form {
+        padding: 15px; /* Less padding for smaller screens */
+    }
+
+    button {
+        font-size: 0.9rem; /* Smaller font size for button */
+    }
+
+    input {
+        padding: 8px; /* Adjust padding for input on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Further adjust h1 size for very small screens */
+    }
+
+    .login-form {
+        max-width: 90%; /* Allow more width on very small screens */
+    }
+}

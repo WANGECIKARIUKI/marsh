@@ -1,0 +1,64 @@
+/* FAQ Section */
+.faq-section {
+  padding: 40px 20px;
+  background-color: black;
+  text-align: center; /* Center text */
+}
+
+.faq-section h2 {
+  font-size: 2rem; /* Title font size */
+  margin-bottom: 30px; /* Space below title */
+  color: white; /* Title color */
+}
+
+/* Grid Layout for FAQ */
+.faq-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between cards */
+}
+
+/* FAQ Card Styles */
+.faq-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Pointer cursor for interactivity */
+  padding: 15px; /* Padding for card */
+}
+
+/* FAQ Question Styles */
+.faq-question {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+/* Plus Sign Styles */
+.plus-sign {
+  font-size: 1.5rem; /* Font size for the plus sign */
+  margin-right: 10px; /* Space between sign and question */
+}
+
+/* FAQ Answer Styles */
+.faq-answer {
+  padding: 10px; /* Padding for answer */
+  font-size: 1rem; /* Answer font size */
+  color: #666; /* Answer color */
+  border-top: 1px solid #e0e0e0; /* Border on top of the answer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-section h2 {
+    font-size: 2rem; /* Smaller title font size */
+  }
+
+  .faq-card {
+    padding: 10px; /* Less padding in cards on smaller screens */
+  }
+
+  .plus-sign {
+    font-size: 1.2rem; /* Smaller plus sign on mobile */
+  }
+}

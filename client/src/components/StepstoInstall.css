@@ -1,0 +1,74 @@
+/* Install Steps Section */
+.install-steps-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: black;
+  }
+  
+  .install-steps-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: white;
+  }
+  
+  /* Steps Container */
+  .install-steps-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Step Card Styles */
+  .install-step-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .install-step-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .install-step-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .install-step-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .install-step-card p {
+    font-size: 1.2rem;
+    color: black;
+  }
+  
+  /* Arrow Styling */
+  .install-arrow {
+    font-size: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .install-steps-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .install-arrow {
+      display: none;
+    }
+  
+    .install-step-card {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+  

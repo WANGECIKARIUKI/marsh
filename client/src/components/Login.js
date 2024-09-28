@@ -1,93 +1,95 @@
-import React, {useState} from 'react';
-import './Login.css'
-import {Link} from 'react-router-dom'
-import firebase from './firebaseConfig'
-import { FaEye, FaEyeSlash} from "react-icons/fa";
-import {useNavigate} from 'react-router-dom';
-import { GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import firebase from './firebaseConfig';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import "./Login.css";
 
-
-
-function Login(){
-
-    
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const[visible, setVisible] = useState(false);
-
-    const handleGoogleSignIn = async () => {
-        const provider = new GoogleAuthProvider();
-        try {
-          const result = await signInWithPopup(firebase.auth(), provider);
-          // Handle successful Google sign-in
-    
-        } catch (error) {
-            alert(error);
-          // Handle Google sign-in errors
-        }
-      };
-    
-    //const [show_input, setShowInput] = useState('')
-
+function Login() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [visible, setVisible] = useState(false);
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-    const isLoggedIn = true;
 
-    if (isLoggedIn) {
-        navigate('/MonitoringApp')
-    }else{
-        navigate('/');
-    }
-
-
-    const handleSubmit = async(e) =>{
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
+        if (!email || !password) {
+            setError('Email and password are required.');
+            return;
+        }
+
         try {
-            const user = await firebase.auth().signInWithEmailAndPassword(email, password)
-            if(user){
-                alert("Login successfully")
-            }
+            setLoading(true);
+            await firebase.auth().signInWithEmailAndPassword(email, password);
+            alert("Login successfully");
+            navigate('/Demo'); // Redirect after successful login
+        } catch (error) {
+            setError(error.message);
+        } finally {
+            setLoading(false);
         }
-        catch(error)
-        {
-            alert(error);
+    };
+
+    const handleForgotPassword = async () => {
+        if (!email) {
+            setError('Please enter your email to reset your password.');
+            return;
         }
-    }
+
+        try {
+            await firebase.auth().sendPasswordResetEmail(email);
+            alert('Password reset email sent! Check your inbox.');
+        } catch (error) {
+            setError(error.message);
+        }
+    };
 
     return (
-
-        <>
-        <div className="main-container-signup">
-            <div className="header">
-                <h1>Log in</h1>
-            </div>
-            <div className ="box">
-                <input type = "email" value= {email} placeholder = "Email" onChange = {(e) => setEmail(e.target.value)}></input>
-            </div>
-    
-            <div className ="box">
-                <input type = {visible ? "text": "password"} value= {password} placeholder = "Password" onChange = {(e) => setPassword(e.target.value)}>
-                </input>
-                <span className = "icons-span" onClick = {() => setVisible(!visible)}>
-                    {
-                        visible ? <FaEye /> : <FaEyeSlash />
-                    }
-            </span>
-            </div>
-            <p style = {{textALign: "center"}}><a href = "/forgotpassword">Forgot password</a></p>
-            <p style = {{textAlign: "left"}}>
-                            No account yet? {' '}
-                            <Link to="/Signup">
-                                Sign up
-                            </Link>
-                        </p>
-            <button onClick = {handleSubmit}>Login</button>
-            <span>or</span>            <button onClick={handleGoogleSignIn}>Sign in with Google</button>
-
+        <div className="main-container-login">
+            <form className="login-form" onSubmit={handleSubmit}>
+                <div className="header">
+                    <h1>Log in</h1>
+                </div>
+                {error && <p className="error-message">{error}</p>}
+                <div className="box">
+                    <input
+                        type="email"
+                        value={email}
+                        placeholder="Email"
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        aria-label="Email"
+                    />
+                </div>
+                <div className="box password-box">
+                    <input
+                        type={visible ? 'text' : 'password'}
+                        value={password}
+                        placeholder="Password"
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        aria-label="Password"
+                    />
+                    <span className="icons-span" onClick={() => setVisible(!visible)}>
+                        {visible ? <FaEye /> : <FaEyeSlash />}
+                    </span>
+                </div>
+                <p style={{ textAlign: "center" }}>
+                    <a href="#" onClick={handleForgotPassword}>Forgot password?</a>
+                </p>
+                <p style={{ textAlign: "left" }}>
+                    No account yet?{' '}
+                    <Link to="/Signup">Sign up</Link>
+                </p>
+                <button type="submit" disabled={loading}>
+                    {loading ? 'Logging in...' : 'Login'}
+                </button>
+            </form>
         </div>
-
-        </>
-    )
+    );
+    
 }
 
 export default Login;

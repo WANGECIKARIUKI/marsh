@@ -1,0 +1,139 @@
+/* SMS.css */
+
+.sms-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  max-width: 600px; /* Limit max width for desktop */
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.chat-header {
+  background-color: #4a90e2; /* Header background color */
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.chat-list {
+  overflow-y: auto; /* Allow scrolling */
+  flex-grow: 1;
+}
+
+.chat-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-item:hover {
+  background-color: #f5f5f5; /* Highlight on hover */
+}
+
+.friend-name {
+  font-weight: bold;
+}
+
+.last-message {
+  display: block;
+  color: #999; /* Lighter color for last message */
+  font-size: 0.9em;
+}
+
+.messages-area {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  flex-grow: 1;
+  overflow-y: auto; /* Allow scrolling */
+}
+
+.message {
+  margin: 5px 0;
+}
+
+.message.me {
+  text-align: right;
+}
+
+.message.friend {
+  text-align: left;
+}
+
+.message-text {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 70%;
+}
+
+.message.me .message-text {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.message.friend .message-text {
+  background-color: #e5e5ea;
+}
+
+.message-time {
+  display: block;
+  font-size: 0.8em;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* Message input styling */
+.message-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.message-input button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.message-input button:hover {
+  background-color: #357ab8;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .sms-container {
+      max-width: 100%; /* Full width on mobile */
+      border: none; /* Remove border on mobile */
+      box-shadow: none; /* Remove shadow on mobile */
+  }
+
+  .chat-header {
+      font-size: 1.5em; /* Larger header font on mobile */
+  }
+
+  .message-input input {
+      padding: 8px;
+  }
+
+  .message-input button {
+      padding: 8px 10px;
+  }
+}

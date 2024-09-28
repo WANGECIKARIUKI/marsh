@@ -1,0 +1,96 @@
+.photo-gallery-container {
+    padding: 20px;
+}
+
+.photo-list {
+    text-align: center;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.photo-item {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.photo-item:hover {
+    transform: scale(1.05);
+}
+
+.photo-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.photo-detail {
+    text-align: center;
+}
+
+.photo-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #005bb5;
+}
+
+.photo-options {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.download-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+.timestamp {
+    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .back-button {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .photo-thumbnail {
+        max-height: 100px;
+    }
+}

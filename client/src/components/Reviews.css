@@ -1,0 +1,237 @@
+.review-slider-container {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.review-card {
+    padding: 15px; /* Reduced padding */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    max-width: 300px; /* Set a max-width to control card size */
+    margin: 0 auto; /* Center the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+}
+
+
+
+/* Pagination */
+.pagination {
+    margin-top: 10px;
+}
+
+.pagination-number {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.prev-button,
+.next-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px; /* Adjust arrow size */
+    transition: background-color 0.3s;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Optional: Customize the button appearance further */
+.prev-button {
+    margin-right: auto; /* Pushes the button to the left */
+}
+
+.next-button {
+    margin-left: auto; /* Pushes the button to the right */
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.prev-button,
+.next-button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer;
+    font-size: 24px; /* Larger font size for arrows */
+    margin: 0 10px; /* Spacing around arrows */
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: red; /* Darker color on hover */
+}
+
+/* Optional: Customize the button appearance further */
+.prev-button {
+    margin-right: auto; /* Pushes the button to the left */
+}
+
+.next-button {
+    margin-left: auto; /* Pushes the button to the right */
+}
+
+.review-slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.review-card {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+    cursor: pointer;
+    color: #333;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 10px;
+}
+
+.prev {
+    left: -40px;
+}
+
+.next {
+    right: -40px;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+/* Pagination number design */
+.slide-number {
+    position: absolute;
+    bottom: -40px; /* Adjust the position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black; /* Black text */
+    border-radius: 50%; /* Make it a circle */
+    width: 40px; /* Circle width */
+    height: 40px; /* Circle height */
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Hover effect on the number for interactivity */
+.slide-number:hover {
+    background-color: #45a049; /* Darker green on hover */
+    cursor: pointer; /* Change cursor to pointer to indicate interaction */
+    transform: translateX(-50%) scale(1.1); /* Slightly enlarge on hover */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+/* Style for responsive design */
+@media (max-width: 600px) {
+    .slide-number {
+        width: 30px; /* Make it smaller for mobile */
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 600px) {
+    .arrow {
+        font-size: 24px;
+    }
+    .prev {
+        left: -20px;
+    }
+    .next {
+        right: -20px;
+    }
+    .slide-number {
+        font-size: 14px;
+    }
+}
+
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    .prev-button,
+    .next-button {
+        padding: 4px 8px; /* Further reduced padding */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .slider-controls {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .review-slider-container {
+        padding: 10px;
+    }
+
+    .review-card {
+        padding: 10px; /* Further reduce padding on smaller screens */
+        font-size: 14px; /* Adjust text size for smaller screens */
+    }
+
+    .slider-controls {
+        flex-direction: column; /* Stack buttons on smaller screens */
+        align-items: center;
+    }
+
+    .prev-button,
+    .next-button {
+        width: 100%; /* Make buttons full width */
+        margin: 5px 0; /* Add some margin between buttons */
+    }
+
+    .pagination {
+        flex-direction: column; /* Stack pagination numbers */
+        align-items: center;
+    }
+
+    .pagination-number {
+        margin: 2px 0; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .review-card {
+        font-size: 12px; /* Further adjust text size for extra small screens */
+    }
+
+    .prev-button,
+    .next-button {
+        font-size: 14px; /* Adjust button text size */
+    }
+}

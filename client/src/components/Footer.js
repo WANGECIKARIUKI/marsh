@@ -1,69 +1,23 @@
+// Footer.js
 import React from 'react';
-import './Footer.css'
-import {Link} from 'react-router-dom';
+import './Footer.css'; // Link to your CSS file
 
-function Footer(){
-    return (
-        <div className = "footer">
-            <div className = "sb-footer section-padding">
-                <div className = "sb-footer-links">
-                    <div className = "sb-footer-links_div">
-                        <h4>Top Features</h4>
-                        <Link to = "./Message">
-                        <p>Messages</p></Link>
-                        <Link to = "./Location">
-                        <p>Gps Location</p></Link>
-                        <Link to = "./Contacts">
-                        <p>Contacts</p></Link>
-                        <Link to = "./Features">
-                        <p>All Features</p></Link>
-                    </div>
-                    <div className = "sb-footer-links_div">
-                        <h4>Reosurces</h4>
-                        <a href = "/resources">
-                          <p>FAQs</p></a>
-                        <a href = "/resources">
-                          <p>Phone Spy</p></a>
-                        <a href = "/resources">
-                          <p>Spy App Reviews</p></a>
-                        <a href = "/resources">
-                          <p>Phone Monitor</p></a>
-                        <a href = "/resources">
-                          <p>Solutions</p></a>
-                        <a href = "/resources">
-                          <p>Parental Control</p></a>
-                    </div>
-                    <div className = "sb-footer-links_div">
-                        <h4>Partners</h4>
-                        <a href = "/employer">
-                        <p>Marshall Goodman Technologies</p></a>
-                    </div>
-                    <div className= "sb-footer-links_div">
-                        <h4>Company</h4>
-                        <a href = "/about">
-                        <p>About Us</p></a>
-                        <a href = "/contact">
-                        <p>Contact Us</p></a>
-                        <a href = "/contact">
-                        <p>support@redspy.com</p></a>
-                    </div>
-                </div>
-            </div>
-            <hr></hr>
-
-            <div className = "sb-footer-below">
-                <div className = "sb-footer-copyright">
-                    <p>
-                        @{new Date().getFullYear} RedSpy. All rights reserved.
-                    </p>
-                </div>
-                <div className = "sb-footer-below-links">
-                    <a href = "/terms"><p>Terms & Conditions</p></a>
-                    <a href = "/privacy"><p>Privacy</p></a>
-                </div>
-            </div>
-        </div>
-    )
-}
+const Footer = () => {
+  return (
+    <section className="footer">
+      <hr />
+      <h4>About Us</h4>
+      <p>We offer the best and accurate services to our clients. The results are realtime.</p>
+      <div className="icons">
+        <i className="fab fa-facebook-f"></i>
+        <i className="fab fa-instagram"></i>
+        <i className="fab fa-twitter"></i>
+        <i className="fab fa-linkedin"></i>
+      </div>
+      <p>Made with <i className="fas fa-heart"></i> by <a href="index.html">Marshall Goodman Industries</a></p>
+      <p>Copyright © 2024 <a href="index.html">RedSpy</a>. All Rights Reserved</p>
+    </section>
+  );
+};
 
 export default Footer;

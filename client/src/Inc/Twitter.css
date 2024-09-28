@@ -1,0 +1,131 @@
+.twitter-chats-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f8fa;
+}
+
+.chats-header {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 20px;
+    width: 70px; /* Reduced width for the back button */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 5px;
+}
+
+.search-bar input {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 10px 15px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.chats-list {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.chat-item:hover {
+    background: #f0f0f0;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.chat-details {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.chat-time {
+    font-size: 12px;
+    color: #657786;
+    margin-left: auto;
+}
+
+.chat-messages {
+    margin-top: 10px;
+    padding-left: 50px; /* Indent messages for better visibility */
+}
+
+.message {
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px 0;
+    max-width: 70%;
+}
+
+.message.me {
+    background: #1DA1F2; /* Blue background for 'me' */
+    color: white; /* White text for 'me' */
+    align-self: flex-end; /* Align to the right */
+}
+
+.message.JohnDoe, .message.JaneSmith, .message.CharleBrown { 
+    background: #e8f5fd; /* Light gray background for the other person */
+    color: black; /* Black text for the other person */
+    align-self: flex-start; /* Align to the left */
+}
+
+.message-time {
+    display: block;
+    font-size: 10px;
+    color: #657786;
+    margin-top: 3px;
+}
+
+@media (max-width: 600px) {
+    .search-bar input {
+        padding: 8px 10px;
+    }
+
+    .chat-item {
+        padding: 10px;
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+    .chat-time {
+        font-size: 10px;
+    }
+
+    .back-button {
+        width: 50px; /* Further reduce button width for smaller screens */
+    }
+}

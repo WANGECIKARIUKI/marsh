@@ -1,0 +1,101 @@
+/* Why Choose Section */
+.why-choose-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: black;
+}
+
+.why-choose-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* Slider Styles */
+.slider-wrapper {
+  position: relative;
+}
+
+.reason-card {
+  background-color: white;
+  padding: 20px; /* Reduced padding for smaller cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 10px; /* Maintain horizontal margin */
+  transition: transform 0.2s; /* Add a hover effect */
+  max-width: 250px; /* Set a max-width for the cards */
+  margin: 0 auto; /* Center align the cards */
+}
+
+.reason-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  color: #007bff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+/* Slide number style */
+.slide-number {
+  position: absolute;
+  bottom: -30px;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 16px;
+  color: white;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .reason-card {
+    padding: 15px; /* Further reduce padding on smaller screens */
+    margin: 0 5px; /* Adjust margin for smaller screens */
+    max-width: 220px; /* Set a smaller max-width for medium screens */
+  }
+
+  .why-choose-section h2 {
+    font-size: 2rem; /* Smaller font size for heading */
+  }
+
+  .arrow {
+    font-size: 20px; /* Smaller arrows */
+  }
+
+  .slide-number {
+    font-size: 14px; /* Smaller slide number */
+  }
+}
+
+@media (max-width: 480px) {
+  .reason-card {
+    padding: 10px; /* Further reduce padding */
+    max-width: 200px; /* Set a smaller max-width for mobile */
+  }
+
+  .why-choose-section h2 {
+    font-size: 1.5rem; /* Even smaller font size */
+  }
+
+  .arrow {
+    font-size: 18px; /* Adjust arrow size */
+  }
+
+  .slide-number {
+    font-size: 12px; /* Smaller slide number */
+  }
+}

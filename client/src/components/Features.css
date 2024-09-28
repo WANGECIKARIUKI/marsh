@@ -67,3 +67,35 @@
 .span{
     font-size: 4rem;
 }
+
+
+@media (max-width: 768px) {
+    .row-container {
+      grid-template-columns: 1fr; /* Change to a single column layout */
+      padding: 10px; /* Reduce padding */
+    }
+  
+    .column {
+      width: auto; /* Allow width to adjust */
+      height: auto; /* Allow height to adjust */
+      padding: 20px; /* Adjust padding */
+      margin: 10px auto; /* Center columns with auto margins */
+      border-radius: 30px; /* Reduce border radius */
+      display: flex; /* Keep flex for centering content */
+      flex-direction: column; /* Stack items vertically */
+    }
+  
+    .p {
+      font-size: 14px; /* Increase font size for better readability */
+      width: auto; /* Allow width to adjust */
+      height: auto; /* Allow height to adjust */
+    }
+  
+    .h1 {
+      font-size: 1.5rem; /* Adjust font size for headings */
+    }
+  
+    .span {
+      font-size: 2rem; /* Reduce size for spans */
+    }
+  }

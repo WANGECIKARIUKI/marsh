@@ -18,8 +18,112 @@
   margin-bottom: 10px;
 }
 
+/* Global font family and size */
+body {
+  font-family: 'Roboto', sans-serif; /* Change 'Roboto' to any desired font family */
+  font-size: 16px; /* Base font size for the entire page */
+  color: #333; /* Adjust the text color if needed */
+}
+
+/* Adjust specific element sizes globally */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif; /* A different font for headings if needed */
+}
+
+h1 {
+  font-size: 36px; /* Adjust main heading size */
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p, a, li {
+  font-size: 16px; /* Default font size for paragraphs and links */
+}
+
+/* You can use media queries to change font sizes on smaller screens */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px; /* Reduce the font size for smaller devices */
+  }
+
+  h1 {
+      font-size: 28px; /* Reduce heading sizes */
+  }
+
+  h2 {
+      font-size: 24px;
+  }
+
+  h3 {
+      font-size: 20px;
+  }
+
+  p, a, li {
+      font-size: 14px; /* Adjust text size on smaller devices */
+  }
+}
+
+
 @media(max-width: 700px) {
   .hero h1 {
       font-size: 24px;
+  }
+  .hero2 h1 {
+    font-size: 24px;
+  }
+  .hero3 h1 {
+    font-size: 24px;
+  }
+  .hero4 h1 {
+    font-size: 24px;
+  }
+  .hero5 h1 {
+    font-size: 24px;
+  }
+  .hero6 h1 {
+    font-size: 24px;
+  }
+  .hero7 h1 {
+    font-size: 24px;
+  }
+  .hero8 h1 {
+    font-size: 24px;
+  }
+  .hero9 h1 {
+    font-size: 24px;
+  }
+  .hero10 h1 {
+    font-size: 24px;
+  }
+  .hero11 h1 {
+    font-size: 24px;
+  }
+  .hero12 h1 {
+    font-size: 24px;
+  }
+  .hero13 h1 {
+    font-size: 24px;
+  }
+  .hero14 h1 {
+    font-size: 24px;
+ }
+ .hero15 h1 {
+  font-size: 24px;
+ }
+ .hero16 h1 {
+  font-size: 24px;
+ }
+}
+
+@media(max-width:700px){
+  .container-fluid{
+    font-size: 24px;
+
   }
 }

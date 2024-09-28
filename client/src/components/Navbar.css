@@ -1,52 +1,115 @@
-.navbar{
-    height: 15vh;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* General Navbar Styles */
+.navbar {
+  background-color: #343a40; /* Dark background */
+  padding: 10px 20px; /* Padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.navbar-logo{
-    color: red;
-    font-family:'''Times New Roman', Times, serif;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Navbar Logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.image{
-    width:  120px;
-    height: 120px;
-    max-width: 100%;
-    max-height: 200px;
+.navbar-logo img {
+  width: 40px;
+  margin-right: 10px;
 }
 
-.nav-items{
-    display: flex;
-    list-style: none;
-    text-align: center;
-    width: 70vw;
-    justify-content:flex-end;
-    margin-right: 2rem;
+/* Navbar Links */
+.nav-link {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
 }
 
-.nav-item{
-    display: flex;
-    align-items: center;
-    height: 10vh;
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
 
-.nav-item a{
-    text-decoration: none;
-    color: black;
-    font-size: 1.1rem;
-    margin-right: 3rem;
-    padding: 6px 16px;
-    border-radius: 10px;
+/* Buttons */
+.btn-lightblue {
+  background-color: #ADD8E6; /* Light blue color */
+  color: white; /* Dark text */
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 10px; /* Space between buttons */
+  transition: background-color 0.3s ease;
 }
 
-.nav-item a:hover{
-    background:red
+.btn-lightblue:hover {
+  background-color: #87ceeb; /* Darker blue on hover */
+}
+
+.signup-btn {
+  background-color: red; /* Red background for Sign Up button */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding for the button */
+  border-radius: 20px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+  position: relative; /* Positioning for pseudo-elements */
+  z-index: 1; /* Ensure it stays on top */
+}
+
+/* Hover effect */
+.signup-btn:hover {
+  background-color: darkred; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Pseudo-element for a unique look */
+.signup-btn::after {
+  content: ''; /* Empty content */
+  position: absolute; /* Position it absolutely */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+  bottom: 0; /* Align to bottom */
+  background-color: rgba(255, 0, 0, 0.3); /* Light red overlay */
+  border-radius: 5px; /* Match the button's border radius */
+  z-index: -1; /* Send it to the back */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+.signup-btn:hover::after {
+  opacity: 1; /* Show overlay on hover */
+}
+
+
+/* Adjust for smaller screens */
+@media (max-width: 992px) {
+  .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar-logo {
+      font-size: 1.2rem;
+  }
+
+  .nav-link {
+      font-size: 0.9rem;
+  }
+
+  .btn-lightblue {
+      width: 100%; /* Full width buttons on smaller screens */
+      margin-left: 0;
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-lightblue {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+  }
 }

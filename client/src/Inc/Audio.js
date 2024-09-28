@@ -109,12 +109,12 @@ navigate("/Signup");}} >Get Started</button>
           title = {"Highly Encrypted"}
           disc = {"Our software employs advanced system encryption when transfering data and only you can access it."}/>
 
-        <Card 
+        <Card
           Icon = {RiCustomerService2Line}
           title = {"Support at All Times"}
           disc = {"We have a 24/7 customer support agency, where your needs are met and problms resolved in the shortest time possible."}/>
 
-        <Card 
+        <Card
           Icon = {MdPriceCheck}
           title = {"Friendly Prices and Discounts"}
           disc = {"We have packages that are pocket friendly and affordable. We also offer discounts on our packages."}/>
