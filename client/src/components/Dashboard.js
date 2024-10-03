@@ -236,3 +236,43 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+
+
+/* for real time data use 
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const Dashboard = () => {
+    const [websiteData, setWebsiteData] = useState([]);
+    const [messagingData, setMessagingData] = useState([]);
+    const [callingData, setCallingData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const websiteResponse = await axios.get('http://127.0.0.1:5000/api/website_data');
+                setWebsiteData(websiteResponse.data);
+
+                const messagingResponse = await axios.get('http://127.0.0.1:5000/api/messaging_data');
+                setMessagingData(messagingResponse.data);
+
+                const callingResponse = await axios.get('http://127.0.0.1:5000/api/calling_data');
+                setCallingData(callingResponse.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    return (
+        <div>
+            {/* Render your charts and data here using websiteData, messagingData, and callingData */
+           {/* </div>
+        );
+    };
+    
+    export default Dashboard;
+    */}

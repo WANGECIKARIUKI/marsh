@@ -84,7 +84,7 @@ function Signup() {
                     />
                 </div>
                 {error && <p className="error-message">{error}</p>}
-                <p>
+                <p style = {{color: 'black'}}>
                     Already have an account?{' '}
                     <Link to="/Login">Sign in</Link>
                 </p>
